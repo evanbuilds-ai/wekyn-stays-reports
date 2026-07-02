@@ -1,0 +1,325 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="robots" content="noindex, nofollow">
+<title>WEKYN Stays, 39655 199th Ave, Park Rapids · Phased Revenue Analysis</title>
+<style>
+  :root{
+    --green:#1f3c34;
+    --sage:#4b7c6b;
+    --sage-soft:#e7f0ec;
+    --ink:#20302b;
+    --muted:#6b7d76;
+    --line:#dfe7e3;
+    --bg:#f6f8f7;
+    --gold:#b8894b;
+    --card:#ffffff;
+  }
+  *{box-sizing:border-box;margin:0;padding:0}
+  body{
+    font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,Helvetica,Arial,sans-serif;
+    background:var(--bg);color:var(--ink);line-height:1.55;
+    -webkit-font-smoothing:antialiased;
+  }
+  .wrap{max-width:720px;margin:0 auto;background:var(--bg);}
+  .pad{padding:22px 20px;}
+
+  /* Header */
+  header{background:var(--green);color:#fff;padding:28px 20px 24px;text-align:center;}
+  header .brand{font-size:13px;letter-spacing:3px;text-transform:uppercase;color:#bcd3ca;font-weight:600;}
+  header .tag{font-size:11px;letter-spacing:1.5px;text-transform:uppercase;color:#8fb0a5;margin-top:4px;}
+  header h1{font-size:20px;font-weight:700;margin-top:16px;line-height:1.3;}
+  header .sub{font-size:13px;color:#a9c6bc;margin-top:6px;}
+
+  h2{font-size:17px;color:var(--green);margin:0 0 4px;font-weight:700;}
+  .lead{font-size:14px;color:var(--muted);margin-bottom:16px;}
+  section{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:20px 18px;margin:16px 20px;}
+  section.flush{margin:16px 20px;}
+
+  /* KPI row */
+  .kpis{display:flex;gap:10px;flex-wrap:wrap;}
+  .kpi{flex:1;min-width:150px;background:var(--sage-soft);border-radius:12px;padding:14px 14px;text-align:center;}
+  .kpi .n{font-size:22px;font-weight:800;color:var(--green);}
+  .kpi .l{font-size:11px;text-transform:uppercase;letter-spacing:.8px;color:var(--sage);margin-top:3px;font-weight:600;}
+
+  .callout{background:#fff8ee;border:1px solid #f0dcc0;border-radius:10px;padding:14px 16px;margin-top:14px;}
+  .callout .h{font-weight:700;color:#8a6428;font-size:13px;margin-bottom:4px;}
+  .callout .h:before{content:"◆ ";color:var(--gold);font-size:10px;vertical-align:middle;}
+  .callout p{font-size:13.5px;color:#5c4a2e;}
+
+  p{font-size:14px;margin-bottom:10px;}
+  .em{background:var(--sage-soft);color:var(--green);font-weight:700;padding:1px 5px;border-radius:4px;}
+
+  /* Tables */
+  table{width:100%;border-collapse:collapse;margin-top:6px;font-size:13px;}
+  th,td{text-align:left;padding:10px 8px;border-bottom:1px solid var(--line);vertical-align:top;}
+  th{font-size:11px;text-transform:uppercase;letter-spacing:.6px;color:var(--sage);font-weight:700;}
+  td.rev{font-weight:800;color:var(--green);white-space:nowrap;}
+  tr.base td{background:var(--sage-soft);}
+
+  .phase-tag{display:inline-block;font-size:11px;font-weight:700;color:#fff;background:var(--sage);border-radius:20px;padding:2px 9px;margin-bottom:2px;}
+  .phase-tag.p0{background:var(--green);}
+  .phase-tag.opt{background:var(--gold);}
+
+  /* Comp list */
+  .comp{display:flex;justify-content:space-between;align-items:center;padding:10px 0;border-bottom:1px solid var(--line);gap:12px;}
+  .comp:last-child{border-bottom:none;}
+  .comp .name{font-size:13px;font-weight:600;color:var(--ink);}
+  .comp .meta{font-size:11.5px;color:var(--muted);margin-top:2px;}
+  .comp .fig{text-align:right;white-space:nowrap;}
+  .comp .fig .r{font-weight:800;color:var(--green);font-size:14px;}
+  .comp .fig .o{font-size:11px;color:var(--muted);}
+  .star{color:var(--gold);}
+
+  /* Seasonal bars */
+  .season{display:flex;align-items:flex-end;gap:4px;height:120px;margin-top:14px;padding-top:6px;}
+  .season .m{flex:1;display:flex;flex-direction:column;align-items:center;justify-content:flex-end;height:100%;}
+  .season .bar{width:100%;background:var(--sage);border-radius:3px 3px 0 0;min-height:3px;}
+  .season .bar.hi{background:var(--green);}
+  .season .bar.lo{background:#c9d8d2;}
+  .season .lbl{font-size:9px;color:var(--muted);margin-top:4px;}
+  .season .val{font-size:9px;color:var(--sage);font-weight:700;}
+
+  /* Calculator */
+  .calc{background:var(--green);color:#fff;border-radius:14px;padding:22px 18px;margin:16px 20px;}
+  .calc h2{color:#fff;}
+  .calc .lead{color:#a9c6bc;}
+  .ctrl{margin-top:16px;}
+  .ctrl label{display:flex;justify-content:space-between;font-size:13px;font-weight:600;margin-bottom:6px;}
+  .ctrl label span.v{color:#cde3d9;}
+  input[type=range]{width:100%;-webkit-appearance:none;height:6px;border-radius:6px;background:#3a5b51;outline:none;}
+  input[type=range]::-webkit-slider-thumb{-webkit-appearance:none;width:22px;height:22px;border-radius:50%;background:#fff;border:3px solid var(--sage);cursor:pointer;}
+  input[type=range]::-moz-range-thumb{width:22px;height:22px;border-radius:50%;background:#fff;border:3px solid var(--sage);cursor:pointer;}
+  .phasepick{display:flex;flex-wrap:wrap;gap:8px;margin-top:16px;}
+  .phasepick button{flex:1;min-width:120px;background:#2b4a41;color:#cde3d9;border:1px solid #3a5b51;border-radius:10px;padding:10px 8px;font-size:12px;font-weight:600;cursor:pointer;transition:.15s;}
+  .phasepick button.active{background:#fff;color:var(--green);border-color:#fff;}
+  .result{margin-top:20px;text-align:center;background:#2b4a41;border-radius:12px;padding:18px;}
+  .result .big{font-size:34px;font-weight:800;letter-spacing:-1px;}
+  .result .cap{font-size:12px;color:#a9c6bc;text-transform:uppercase;letter-spacing:1px;margin-top:4px;}
+  .result .split{display:flex;justify-content:center;gap:22px;margin-top:12px;font-size:12px;color:#cde3d9;}
+  .result .split b{display:block;font-size:16px;color:#fff;}
+
+  .disclaimer{font-size:11px;color:var(--muted);padding:6px 20px 30px;text-align:center;line-height:1.5;}
+  footer{background:var(--green);color:#a9c6bc;text-align:center;padding:22px 20px;font-size:12px;}
+  footer .b{color:#fff;font-weight:700;font-size:14px;letter-spacing:1px;}
+  footer a{color:#cde3d9;text-decoration:none;}
+  ul.clean{list-style:none;margin-top:8px;}
+  ul.clean li{font-size:13.5px;padding:6px 0 6px 22px;position:relative;border-bottom:1px solid var(--line);}
+  ul.clean li:last-child{border-bottom:none;}
+  ul.clean li:before{content:"›";position:absolute;left:4px;color:var(--sage);font-weight:800;}
+</style>
+</head>
+<body>
+<div class="wrap">
+
+  <header>
+    <div class="brand">WEKYN Stays</div>
+    <div class="tag">Where Everyone Knows Your Name</div>
+    <h1>Phased Revenue Analysis</h1>
+    <div class="sub">39655 199th Ave · Park Rapids, MN · 5BR / 3BA Private-Lake Estate on 55 Acres</div>
+  </header>
+
+  <!-- SNAPSHOT -->
+  <section>
+    <h2>The Snapshot</h2>
+    <p class="lead">A one-of-a-kind property with no true peer in the market. Here's what it can do, and what each build phase adds.</p>
+    <div class="kpis">
+      <div class="kpi"><div class="n">$75–95K</div><div class="l">Base Year Revenue</div></div>
+      <div class="kpi"><div class="n">$140–175K</div><div class="l">Fully Built Out</div></div>
+      <div class="kpi"><div class="n">86%</div><div class="l">Peak Summer Occ.</div></div>
+    </div>
+    <div class="callout">
+      <div class="h">The one-line takeaway</div>
+      <p>Park Rapids' modest resort cabins sit half-empty at 12–21% occupancy, but a <em>differentiated, amenity-rich, well-managed</em> home in this market clears six figures. Your private lake, game room, and steam room put you in that lane, not the cabin lane.</p>
+    </div>
+  </section>
+
+  <!-- MARKET READ -->
+  <section>
+    <h2>The Market Read</h2>
+    <p>AirROI's model estimates this property at <span class="em">$73,179/yr</span> (ADR $534, 44% occupancy). A pure comp-based model lands lower, around $26K base, but that number is <b>dragged down by weak comps</b>, not by your property.</p>
+    <p>Park Rapids is a <b>thin comp market</b>: five of the six closest comparables are modest resort cabins running just 12–21% occupancy. They are not a ceiling for a luxury private-lake estate. The comp that actually matches your play is the proof point below.</p>
+  </section>
+
+  <!-- COMPS -->
+  <section>
+    <h2>The Comparables</h2>
+    <p class="lead">6 comps pulled within a 5-mile radius. One shows exactly what a differentiated property does here.</p>
+
+    <div class="comp">
+      <div>
+        <div class="name"><span class="star">★</span> Unique Waterfront Home w/ Game &amp; Movie <span style="color:var(--gold);font-size:11px;": your proof point</span></div>
+        <div class="meta">7BR · sleeps 16 · amenity-rich &amp; well-run</div>
+      </div>
+      <div class="fig"><div class="r">$116,157</div><div class="o">52% occ</div></div>
+    </div>
+    <div class="comp">
+      <div><div class="name">Private Home w/ Theater, Dock &amp; Pontoon</div><div class="meta">3BR · sleeps 13</div></div>
+      <div class="fig"><div class="r">$68,090</div><div class="o">21% occ</div></div>
+    </div>
+    <div class="comp">
+      <div><div class="name">Brick House on the River, Riverside Point</div><div class="meta">5BR · sleeps 14</div></div>
+      <div class="fig"><div class="r">$26,976</div><div class="o">12% occ</div></div>
+    </div>
+    <div class="comp">
+      <div><div class="name">Log Cabin at Bolton Bay on Long Lake</div><div class="meta">4BR · sleeps 10</div></div>
+      <div class="fig"><div class="r">$25,554</div><div class="o">20% occ</div></div>
+    </div>
+    <div class="comp">
+      <div><div class="name">Lakeside Cottage at Bolton Bay</div><div class="meta">3BR · sleeps 8</div></div>
+      <div class="fig"><div class="r">$18,935</div><div class="o">17% occ</div></div>
+    </div>
+    <div class="comp">
+      <div><div class="name">Cam Cottage at Bolton Bay on Long Lake</div><div class="meta">4BR · sleeps 8</div></div>
+      <div class="fig"><div class="r">$16,521</div><div class="o">16% occ</div></div>
+    </div>
+
+    <div class="callout">
+      <div class="h">Why the gap matters</div>
+      <p>The cabins earn little because they're generic and run at low occupancy. The one home with a game room, movie room, and strong management does <b>4–7× the revenue</b>. That gap is the entire opportunity here, and it's the gap WEKYN's management is built to close.</p>
+    </div>
+  </section>
+
+  <!-- PHASED PLAN -->
+  <section>
+    <h2>The Phased Build Plan</h2>
+    <p class="lead">Sequenced by ROI. The private lake + 55 acres is the base, it's the land, not a phase. Each phase is what you <i>add</i>.</p>
+    <table>
+      <thead><tr><th>Phase</th><th>What's Added</th><th>Est. Revenue</th></tr></thead>
+      <tbody>
+        <tr class="base">
+          <td><span class="phase-tag p0">Base</span></td>
+          <td>5BR / 3BA home · private lake · garage game room (pool, arcade, shuffleboard) · 7×7 steam shower</td>
+          <td class="rev">$75–95K</td>
+        </tr>
+        <tr>
+          <td><span class="phase-tag">Phase 1</span></td>
+          <td>Hot tub + sauna + geodome<br><span style="color:var(--muted);font-size:11.5px;">#1 ROI amenity up north; sauna = winter appeal; geodome = wow factor + future standalone unit</span></td>
+          <td class="rev">$100–125K</td>
+        </tr>
+        <tr>
+          <td><span class="phase-tag">Phase 2</span></td>
+          <td>Outdoor eatery + grill<br><span style="color:var(--muted);font-size:11.5px;">Cheap add; strengthens the "gather everyone" story</span></td>
+          <td class="rev">$110–135K</td>
+        </tr>
+        <tr>
+          <td><span class="phase-tag">Phase 3</span></td>
+          <td>Indoor sports court, pickleball + basketball<br><span style="color:var(--muted);font-size:11.5px;">The winter unlock, fills the Nov–Mar dead season</span></td>
+          <td class="rev">$140–175K</td>
+        </tr>
+        <tr>
+          <td><span class="phase-tag opt">Option</span></td>
+          <td>Shed → 6th bedroom + bath<br><span style="color:var(--muted);font-size:11.5px;">Headcount bump → higher ADR + moves up a comp tier</span></td>
+          <td class="rev">+10–15%</td>
+        </tr>
+      </tbody>
+    </table>
+  </section>
+
+  <!-- SEASONAL -->
+  <section>
+    <h2>Why the Phases Matter: Seasonality</h2>
+    <p class="lead">Market occupancy by month. Summer sells itself, the money in the phases is in filling the off-season.</p>
+    <div class="season">
+      <div class="m"><div class="val">29</div><div class="bar lo" style="height:34%"></div><div class="lbl">J</div></div>
+      <div class="m"><div class="val">27</div><div class="bar lo" style="height:31%"></div><div class="lbl">F</div></div>
+      <div class="m"><div class="val">30</div><div class="bar lo" style="height:35%"></div><div class="lbl">M</div></div>
+      <div class="m"><div class="val">25</div><div class="bar lo" style="height:29%"></div><div class="lbl">A</div></div>
+      <div class="m"><div class="val">36</div><div class="bar" style="height:42%"></div><div class="lbl">M</div></div>
+      <div class="m"><div class="val">60</div><div class="bar" style="height:70%"></div><div class="lbl">J</div></div>
+      <div class="m"><div class="val">86</div><div class="bar hi" style="height:100%"></div><div class="lbl">J</div></div>
+      <div class="m"><div class="val">77</div><div class="bar hi" style="height:90%"></div><div class="lbl">A</div></div>
+      <div class="m"><div class="val">44</div><div class="bar" style="height:51%"></div><div class="lbl">S</div></div>
+      <div class="m"><div class="val">37</div><div class="bar" style="height:43%"></div><div class="lbl">O</div></div>
+      <div class="m"><div class="val">30</div><div class="bar lo" style="height:35%"></div><div class="lbl">N</div></div>
+      <div class="m"><div class="val">37</div><div class="bar" style="height:43%"></div><div class="lbl">D</div></div>
+    </div>
+    <div class="callout">
+      <div class="h">The strategy in one sentence</div>
+      <p>Summer runs 77–86% with no help. <b>The hot tub/sauna (Phase 1) and indoor court (Phase 3) exist to fill November–April</b>, where the market sits at 25–37%, that's where the real upside lives.</p>
+    </div>
+  </section>
+
+  <!-- INTERACTIVE CALCULATOR -->
+  <div class="calc">
+    <h2>Build Your Own Projection</h2>
+    <p class="lead">Pick a phase, adjust the assumptions, and see the year.</p>
+
+    <div class="phasepick" id="phases">
+      <button data-lo="75000" data-hi="95000" class="active">Base</button>
+      <button data-lo="100000" data-hi="125000">+ Phase 1</button>
+      <button data-lo="110000" data-hi="135000">+ Phase 2</button>
+      <button data-lo="140000" data-hi="175000">+ Phase 3</button>
+    </div>
+
+    <div class="ctrl">
+      <label>Occupancy <span class="v" id="occV">44%</span></label>
+      <input type="range" id="occ" min="25" max="65" value="44">
+    </div>
+    <div class="ctrl">
+      <label>Average Nightly Rate <span class="v" id="adrV">$534</span></label>
+      <input type="range" id="adr" min="300" max="850" value="534" step="10">
+    </div>
+
+    <div class="result">
+      <div class="big" id="annual">$85,974</div>
+      <div class="cap">Projected Annual Revenue</div>
+      <div class="split">
+        <div>Nights Booked<b id="nights">161</b></div>
+        <div>Phase Range<b id="range">$75–95K</b></div>
+      </div>
+    </div>
+  </div>
+
+  <p class="disclaimer">
+    Base and comp figures pulled live from AirROI market data (5-mi radius, {generated}). Phase projections are directional planning estimates, the added amenities do not yet exist, so they are modeled on market behavior and WEKYN's experience, not comped listings. Actual results depend on build quality, pricing execution, and management.
+  </p>
+
+  <footer>
+    <div class="b">WEKYN STAYS</div>
+    <div style="margin-top:4px;">Boutique Luxury Vacation Rental Management · Crosslake &amp; Brainerd Lakes, MN</div>
+    <div style="margin-top:8px;"><a href="https://www.wekynstays.com">wekynstays.com</a> · Evan.wekynstays@gmail.com</div>
+  </footer>
+
+</div>
+
+<script>
+(function(){
+  var occ=document.getElementById('occ'),adr=document.getElementById('adr');
+  var occV=document.getElementById('occV'),adrV=document.getElementById('adrV');
+  var annual=document.getElementById('annual'),nights=document.getElementById('nights'),range=document.getElementById('range');
+  var lo=75000,hi=95000;
+  function fmtK(n){return '$'+Math.round(n/1000)+'K';}
+  function calc(){
+    var o=+occ.value,a=+adr.value;
+    var n=Math.round(365*o/100);
+    var rev=n*a;
+    occV.textContent=o+'%';
+    adrV.textContent='$'+a;
+    annual.textContent='$'+rev.toLocaleString();
+    nights.textContent=n;
+    range.textContent=fmtK(lo)+'–'+fmtK(hi).replace('$','');
+  }
+  occ.addEventListener('input',calc);
+  adr.addEventListener('input',calc);
+  document.querySelectorAll('#phases button').forEach(function(b){
+    b.addEventListener('click',function(){
+      document.querySelectorAll('#phases button').forEach(function(x){x.classList.remove('active');});
+      b.classList.add('active');
+      lo=+b.dataset.lo;hi=+b.dataset.hi;
+      // nudge ADR/occ toward the phase midpoint for a sensible default
+      var mid=(lo+hi)/2;
+      // keep current occ, solve implied adr for midpoint, clamp
+      var n=Math.round(365*(+occ.value)/100);
+      var impliedAdr=Math.min(850,Math.max(300,Math.round(mid/n/10)*10));
+      adr.value=impliedAdr;
+      calc();
+    });
+  });
+  calc();
+})();
+</script>
+</body>
+</html>
