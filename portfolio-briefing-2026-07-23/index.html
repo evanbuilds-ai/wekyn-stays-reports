@@ -1,0 +1,403 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="robots" content="noindex, nofollow">
+<title>WEKYN Stays · Weekly Portfolio Revenue Briefing · July 23, 2026</title>
+<style>
+  :root{
+    --green:#1f3c34;
+    --sage:#4b7c6b;
+    --sage-soft:#e7f0ec;
+    --ink:#20302b;
+    --muted:#6b7d76;
+    --line:#dfe7e3;
+    --bg:#f6f8f7;
+    --gold:#b8894b;
+    --rust:#b05a4a;
+    --card:#ffffff;
+  }
+  *{box-sizing:border-box;margin:0;padding:0}
+  body{
+    font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,Helvetica,Arial,sans-serif;
+    background:var(--bg);color:var(--ink);line-height:1.55;
+    -webkit-font-smoothing:antialiased;
+  }
+  .wrap{max-width:720px;margin:0 auto;background:var(--bg);}
+
+  header{background:var(--green);color:#fff;padding:28px 20px 24px;text-align:center;}
+  header .brand{font-size:13px;letter-spacing:3px;text-transform:uppercase;color:#bcd3ca;font-weight:600;}
+  header .tag{font-size:11px;letter-spacing:1.5px;text-transform:uppercase;color:#8fb0a5;margin-top:4px;}
+  header h1{font-size:20px;font-weight:700;margin-top:16px;line-height:1.3;}
+  header .sub{font-size:13px;color:#a9c6bc;margin-top:6px;}
+
+  h2{font-size:17px;color:var(--green);margin:0 0 4px;font-weight:700;}
+  .lead{font-size:14px;color:var(--muted);margin-bottom:16px;}
+  section{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:20px 18px;margin:16px 20px;}
+
+  .status{display:inline-block;font-size:11px;font-weight:700;padding:2px 9px;border-radius:20px;color:#fff;background:var(--sage);margin-left:8px;vertical-align:middle;}
+  .status.red{background:var(--rust);}
+
+  .kpis{display:flex;gap:10px;flex-wrap:wrap;}
+  .kpi{flex:1;min-width:150px;background:var(--sage-soft);border-radius:12px;padding:14px 14px;text-align:center;}
+  .kpi .n{font-size:22px;font-weight:800;color:var(--green);}
+  .kpi .n .vs{font-size:13px;font-weight:700;color:var(--muted);}
+  .kpi .l{font-size:11px;text-transform:uppercase;letter-spacing:.8px;color:var(--sage);margin-top:3px;font-weight:600;}
+
+  .callout{background:#fff8ee;border:1px solid #f0dcc0;border-radius:10px;padding:14px 16px;margin-top:14px;}
+  .callout .h{font-weight:700;color:#8a6428;font-size:13px;margin-bottom:4px;}
+  .callout .h:before{content:"\25C6 ";color:var(--gold);font-size:10px;vertical-align:middle;}
+  .callout p{font-size:13.5px;color:#5c4a2e;}
+
+  p{font-size:14px;margin-bottom:10px;}
+  .em{background:var(--sage-soft);color:var(--green);font-weight:700;padding:1px 5px;border-radius:4px;}
+
+  table{width:100%;border-collapse:collapse;margin-top:6px;font-size:13px;}
+  th,td{text-align:left;padding:10px 8px;border-bottom:1px solid var(--line);vertical-align:top;}
+  th{font-size:11px;text-transform:uppercase;letter-spacing:.6px;color:var(--sage);font-weight:700;}
+  td.rev{font-weight:800;color:var(--green);white-space:nowrap;}
+  tr:last-child td{border-bottom:none;}
+
+  .phase-tag{display:inline-block;font-size:11px;font-weight:700;color:#fff;background:var(--sage);border-radius:20px;padding:2px 9px;white-space:nowrap;}
+  .phase-tag.hot{background:var(--rust);}
+  .phase-tag.watch{background:var(--gold);}
+
+  .comp{display:flex;justify-content:space-between;align-items:center;padding:10px 0;border-bottom:1px solid var(--line);gap:12px;}
+  .comp:last-child{border-bottom:none;}
+  .comp .name{font-size:13px;font-weight:600;color:var(--ink);}
+  .comp .meta{font-size:11.5px;color:var(--muted);margin-top:2px;}
+  .comp .fig{text-align:right;white-space:nowrap;}
+  .comp .fig .r{font-weight:800;color:var(--green);font-size:14px;}
+  .comp .fig .o{font-size:11px;color:var(--muted);}
+  .star{color:var(--gold);}
+
+  /* Us-vs-market paired bars */
+  .duo{display:flex;align-items:flex-end;gap:18px;height:130px;margin-top:16px;padding-top:6px;justify-content:center;}
+  .duo .m{display:flex;flex-direction:column;align-items:center;justify-content:flex-end;height:100%;width:110px;}
+  .duo .pair{display:flex;align-items:flex-end;gap:6px;height:100%;width:100%;justify-content:center;}
+  .duo .col{display:flex;flex-direction:column;align-items:center;justify-content:flex-end;height:100%;width:34px;}
+  .duo .bar{width:100%;border-radius:3px 3px 0 0;min-height:3px;}
+  .duo .bar.us{background:var(--green);}
+  .duo .bar.us.low{background:var(--rust);}
+  .duo .bar.mkt{background:#c9d8d2;}
+  .duo .val{font-size:10px;font-weight:700;color:var(--sage);margin-bottom:2px;}
+  .duo .lbl{font-size:10px;color:var(--muted);margin-top:5px;font-weight:600;}
+  .legend{display:flex;gap:16px;justify-content:center;margin-top:10px;font-size:11px;color:var(--muted);}
+  .legend i{display:inline-block;width:10px;height:10px;border-radius:2px;margin-right:5px;vertical-align:middle;}
+
+  ul.clean{list-style:none;margin-top:8px;}
+  ul.clean li{font-size:13.5px;padding:6px 0 6px 22px;position:relative;border-bottom:1px solid var(--line);}
+  ul.clean li:last-child{border-bottom:none;}
+  ul.clean li:before{content:"\203A";position:absolute;left:4px;color:var(--sage);font-weight:800;}
+
+  .stake{background:var(--green);color:#fff;border-radius:14px;padding:22px 18px;margin:16px 20px;text-align:center;}
+  .stake h2{color:#fff;}
+  .stake .lead{color:#a9c6bc;margin-bottom:6px;}
+  .stake .big{font-size:34px;font-weight:800;letter-spacing:-1px;margin-top:10px;}
+  .stake .cap{font-size:12px;color:#a9c6bc;text-transform:uppercase;letter-spacing:1px;margin-top:4px;}
+  .stake .split{display:flex;justify-content:center;gap:26px;margin-top:14px;font-size:12px;color:#cde3d9;flex-wrap:wrap;}
+  .stake .split b{display:block;font-size:16px;color:#fff;}
+
+  .disclaimer{font-size:11px;color:var(--muted);padding:6px 20px 30px;text-align:center;line-height:1.5;}
+  footer{background:var(--green);color:#a9c6bc;text-align:center;padding:22px 20px;font-size:12px;}
+  footer .b{color:#fff;font-weight:700;font-size:14px;letter-spacing:1px;}
+  footer a{color:#cde3d9;text-decoration:none;}
+</style>
+</head>
+<body>
+<div class="wrap">
+
+  <header>
+    <div class="brand">WEKYN Stays</div>
+    <div class="tag">Where Everyone Knows Your Name</div>
+    <h1>Weekly Portfolio Revenue Briefing</h1>
+    <div class="sub">All 6 properties · July 23, 2026<br>PriceLabs · OwnerRez · RankBreeze</div>
+  </header>
+
+  <!-- SNAPSHOT -->
+  <section>
+    <h2>The Snapshot</h2>
+    <p class="lead">Border Point, Rustic Ridge and Avari's Crossing keep running well ahead of market. The three softer properties &mdash; Golden Wings, Butterfield and Loon Cabin &mdash; are still catching up, but the portfolio picked up real momentum this week: about $13,950 in new confirmed bookings landed across five properties since last Friday.</p>
+    <div class="kpis">
+      <div class="kpi"><div class="n">$148K</div><div class="l">Forward Revenue &middot; 90 Days</div></div>
+      <div class="kpi"><div class="n">3 of 6</div><div class="l">Properties Still Catching Up</div></div>
+      <div class="kpi"><div class="n">~$13.9K</div><div class="l">New Bookings, Past 7 Days</div></div>
+    </div>
+    <div class="callout">
+      <div class="h">The one-line takeaway</div>
+      <p>Nothing is on fire this week. The lake properties are outperforming market at every horizon and Avari's Crossing keeps landing five-figure bookings a year-plus out. The three softer performers are all showing strong Airbnb search interest with weak conversion (not a visibility problem), and Butterfield's live pricing still doesn't match what the playbook notes describe &mdash; the same gap flagged last week and still unresolved.</p>
+    </div>
+  </section>
+
+  <!-- BORDER POINT LODGE -->
+  <section>
+    <h2>Border Point Lodge <span class="status">Outperforming</span></h2>
+    <p class="lead">3BR, Fawn Lake &middot; base $475 &middot; owned property. Occupancy is beating market at every horizon this week.</p>
+
+    <div class="duo">
+      <div class="m"><div class="pair">
+        <div class="col"><div class="val">75</div><div class="bar us low" style="height:75%"></div></div>
+        <div class="col"><div class="val">78</div><div class="bar mkt" style="height:78%"></div></div>
+      </div><div class="lbl">July</div></div>
+      <div class="m"><div class="pair">
+        <div class="col"><div class="val">100</div><div class="bar us" style="height:100%"></div></div>
+        <div class="col"><div class="val">55</div><div class="bar mkt" style="height:55%"></div></div>
+      </div><div class="lbl">August</div></div>
+      <div class="m"><div class="pair">
+        <div class="col"><div class="val">23</div><div class="bar us" style="height:23%"></div></div>
+        <div class="col"><div class="val">22</div><div class="bar mkt" style="height:22%"></div></div>
+      </div><div class="lbl">September</div></div>
+    </div>
+    <div class="legend">
+      <span><i style="background:var(--green)"></i>Border Point</span>
+      <span><i style="background:#c9d8d2"></i>Market</span>
+      <span><i style="background:var(--rust)"></i>Behind market</span>
+    </div>
+
+    <p style="margin-top:16px;">Revenue YTD is <span class="em">$66,573</span>, up 21% over last year, and ADR next 45 days is $864 (+3% YoY). Occupancy is 15&ndash;29 points ahead of market through September. One thing worth a glance: the last confirmed booking landed July 14 &mdash; nine days without new pickup despite the strong occupancy picture. Not urgent, just worth watching if it stretches another week.</p>
+
+    <ul class="clean">
+      <li>4 blocked dates (Aug 10&ndash;13) &mdash; confirm these are an intentional owner hold, not a leftover.</li>
+      <li>Last-minute discount is still 0%; market suggests up to 40% inside 60 days. Low priority given BPL is already outperforming, but an easy lever if any open date lingers.</li>
+      <li>Sept 19 override (+10% per notes) is live and matches &mdash; playbook and pricing agree here.</li>
+    </ul>
+  </section>
+
+  <!-- RUSTIC RIDGE LODGE -->
+  <section>
+    <h2>Rustic Ridge Lodge <span class="status">Outperforming</span></h2>
+    <p class="lead">3BR, Fawn Lake &middot; pontoon included &middot; base $374. The strongest YoY grower in the portfolio.</p>
+
+    <div class="duo">
+      <div class="m"><div class="pair">
+        <div class="col"><div class="val">100</div><div class="bar us" style="height:100%"></div></div>
+        <div class="col"><div class="val">78</div><div class="bar mkt" style="height:78%"></div></div>
+      </div><div class="lbl">July</div></div>
+      <div class="m"><div class="pair">
+        <div class="col"><div class="val">77</div><div class="bar us" style="height:77%"></div></div>
+        <div class="col"><div class="val">55</div><div class="bar mkt" style="height:55%"></div></div>
+      </div><div class="lbl">August</div></div>
+      <div class="m"><div class="pair">
+        <div class="col"><div class="val">53</div><div class="bar us" style="height:53%"></div></div>
+        <div class="col"><div class="val">22</div><div class="bar mkt" style="height:22%"></div></div>
+      </div><div class="lbl">September</div></div>
+    </div>
+    <div class="legend">
+      <span><i style="background:var(--green)"></i>Rustic Ridge</span>
+      <span><i style="background:#c9d8d2"></i>Market</span>
+      <span><i style="background:var(--rust)"></i>Behind market</span>
+    </div>
+
+    <p style="margin-top:16px;">Revenue YTD is <span class="em">$41,329</span>, up 53% over last year &mdash; the biggest year-over-year mover in the portfolio. ADR next 45 days is $827, up 24% YoY. Next-30 revenue is up 54% versus this time last year. The day-of-week discount (-10% midweek, -8% Thu/Sun) is doing its job alongside strong organic demand.</p>
+
+    <ul class="clean">
+      <li>11 blocked dates &mdash; still the largest block count in the portfolio, concentrated Sept 16&ndash;24 and Oct 1&ndash;3, right as market demand color reads Good/High for the surrounding open dates. Worth confirming these are intentional owner holds; if not, releasing them looks like real upside given the demand signal.</li>
+      <li>Last-minute discount is 0%; same easy lever as Border Point if any date lingers unbooked inside 2 weeks.</li>
+    </ul>
+  </section>
+
+  <!-- AVARI'S CROSSING -->
+  <section>
+    <h2>Avari's Crossing <span class="status">Outperforming</span></h2>
+    <p class="lead">4BR, Pequot Lakes &middot; base $615. Highest ADR and highest forward revenue in the portfolio.</p>
+
+    <div class="duo">
+      <div class="m"><div class="pair">
+        <div class="col"><div class="val">92</div><div class="bar us" style="height:92%"></div></div>
+        <div class="col"><div class="val">77</div><div class="bar mkt" style="height:77%"></div></div>
+      </div><div class="lbl">July</div></div>
+      <div class="m"><div class="pair">
+        <div class="col"><div class="val">84</div><div class="bar us" style="height:84%"></div></div>
+        <div class="col"><div class="val">58</div><div class="bar mkt" style="height:58%"></div></div>
+      </div><div class="lbl">August</div></div>
+      <div class="m"><div class="pair">
+        <div class="col"><div class="val">57</div><div class="bar us" style="height:57%"></div></div>
+        <div class="col"><div class="val">23</div><div class="bar mkt" style="height:23%"></div></div>
+      </div><div class="lbl">September</div></div>
+    </div>
+    <div class="legend">
+      <span><i style="background:var(--green)"></i>Avari's Crossing</span>
+      <span><i style="background:#c9d8d2"></i>Market</span>
+      <span><i style="background:var(--rust)"></i>Behind market</span>
+    </div>
+
+    <p style="margin-top:16px;">Revenue next 90 days is <span class="em">$42,097</span>, the highest in the portfolio, and ADR past 45 days is $1,222 &mdash; also the portfolio high. The far-out premium pricing strategy (flat +20% beyond 321 days out) keeps landing big proof points, including two new ones this week.</p>
+
+    <div class="comp">
+      <div><div class="name">Jul 21&ndash;Aug 1, 2027 &middot; Airbnb</div><div class="meta">11 nights, booked 2 years out</div></div>
+      <div class="fig"><div class="r">$14,360</div><div class="o">total</div></div>
+    </div>
+    <div class="comp">
+      <div><div class="name">Aug 1&ndash;6, 2027 &middot; Airbnb</div><div class="meta">5 nights, booked this week</div></div>
+      <div class="fig"><div class="r">$6,436</div><div class="o">total</div></div>
+    </div>
+    <div class="comp">
+      <div><div class="name">Jul 14&ndash;19, 2027 &middot; Airbnb</div><div class="meta">5 nights, booked this week</div></div>
+      <div class="fig"><div class="r">$6,864</div><div class="o">total</div></div>
+    </div>
+
+    <ul class="clean">
+      <li>6 blocked dates flagged &mdash; confirm intentional (Sept 25&ndash;26 is one of them).</li>
+    </ul>
+  </section>
+
+  <!-- GOLDEN WINGS -->
+  <section>
+    <h2>Golden Wings <span class="status red">Needs Attention</span></h2>
+    <p class="lead">3BR, Memphis TN &middot; base $245 &middot; owned property. Different market than the lakes, and a fresh booking landed as this report was being built.</p>
+
+    <div class="duo">
+      <div class="m"><div class="pair">
+        <div class="col"><div class="val">17</div><div class="bar us low" style="height:17%"></div></div>
+        <div class="col"><div class="val">62</div><div class="bar mkt" style="height:62%"></div></div>
+      </div><div class="lbl">July</div></div>
+      <div class="m"><div class="pair">
+        <div class="col"><div class="val">32</div><div class="bar us" style="height:32%"></div></div>
+        <div class="col"><div class="val">29</div><div class="bar mkt" style="height:29%"></div></div>
+      </div><div class="lbl">August</div></div>
+      <div class="m"><div class="pair">
+        <div class="col"><div class="val">10</div><div class="bar us low" style="height:10%"></div></div>
+        <div class="col"><div class="val">14</div><div class="bar mkt" style="height:14%"></div></div>
+      </div><div class="lbl">September</div></div>
+    </div>
+    <div class="legend">
+      <span><i style="background:var(--green)"></i>Golden Wings</span>
+      <span><i style="background:#c9d8d2"></i>Market</span>
+      <span><i style="background:var(--rust)"></i>Behind market</span>
+    </div>
+
+    <p style="margin-top:16px;">RankBreeze shows Golden Wings ranked <span class="em">#15 of 320</span> on page 1, with first-page impressions more than 11&times; similar listings (47,874 vs 4,083) &mdash; visibility is not the issue. Booking rate (26.1%) is essentially in line with the comp average (25.8%), so this reads as normal seasonal cooling in the Memphis market through August, not a listing problem. YTD revenue is still up 20% YoY and ADR is up 15% YoY. As this report was being pulled, a new 3-night Airbnb booking landed for tomorrow (Jul 24) at $838 &mdash; the 0% next-7-day occupancy PriceLabs still shows in its last sync is already out of date.</p>
+
+    <ul class="clean">
+      <li>July occupancy gap is the widest in the portfolio (17% vs 62% market) &mdash; worth a look, though the just-landed booking is a good early sign.</li>
+      <li>Last-minute discount is 0%; market suggests up to 38% inside the final 10 days. Same easy lever as the lake properties.</li>
+    </ul>
+
+    <div class="callout">
+      <div class="h">The fix</div>
+      <p>Turn on last-minute discounting to the market-recommended level to keep pulling forward bookings like today's into the calendar. Visibility and conversion are both healthy &mdash; this is about closing near-term gaps, not a structural problem.</p>
+    </div>
+  </section>
+
+  <!-- BUTTERFIELD RETREAT -->
+  <section>
+    <h2>Butterfield Retreat <span class="status red">Needs Attention</span></h2>
+    <p class="lead">4BR, Emily MN &middot; base $400, no max price cap set. Same playbook-vs-live gap flagged last week, still open.</p>
+
+    <div class="duo">
+      <div class="m"><div class="pair">
+        <div class="col"><div class="val">83</div><div class="bar us" style="height:83%"></div></div>
+        <div class="col"><div class="val">78</div><div class="bar mkt" style="height:78%"></div></div>
+      </div><div class="lbl">July</div></div>
+      <div class="m"><div class="pair">
+        <div class="col"><div class="val">58</div><div class="bar us low" style="height:58%"></div></div>
+        <div class="col"><div class="val">60</div><div class="bar mkt" style="height:60%"></div></div>
+      </div><div class="lbl">August</div></div>
+      <div class="m"><div class="pair">
+        <div class="col"><div class="val">10</div><div class="bar us low" style="height:10%"></div></div>
+        <div class="col"><div class="val">25</div><div class="bar mkt" style="height:25%"></div></div>
+      </div><div class="lbl">September</div></div>
+    </div>
+    <div class="legend">
+      <span><i style="background:var(--green)"></i>Butterfield</span>
+      <span><i style="background:#c9d8d2"></i>Market</span>
+      <span><i style="background:var(--rust)"></i>Behind market</span>
+    </div>
+
+    <p style="margin-top:16px;">July and August occupancy are both close to market now (83% vs 78%, 58% vs 60%) &mdash; real progress since last week. September is still the soft spot (10% vs 25% market). The active team is clearly working the calendar: midweek discounts are live across July, August and September to chase last-minute bookings.</p>
+
+    <div class="callout">
+      <div class="h">Still worth reconciling</div>
+      <p>On several of the documented midweek discount dates (Aug 5, Aug 10, Aug 24, Sept 1, Sept 7), the live price is running 18&ndash;30% below PriceLabs' baseline algorithm price &mdash; noticeably deeper than the 5&ndash;10% the notes describe. Some of that is the algorithm's own demand-based softening on slow dates stacking with the manual discount, which is expected, but the size of the gap is worth a quick sanity check against intent so no date is discounted further than planned.</p>
+    </div>
+
+    <ul class="clean">
+      <li>No max price cap is set on this listing (min $200, max blank) &mdash; the only property in the portfolio without one. Worth setting a ceiling so peak dates aren't left on the table.</li>
+      <li>6 blocked dates (Sept 4&ndash;6) flagged by PriceLabs as worth a second look.</li>
+    </ul>
+  </section>
+
+  <!-- LOON CABIN -->
+  <section>
+    <h2>Loon Cabin <span class="status red">Needs Attention</span></h2>
+    <p class="lead">5BR, Aitkin MN &middot; base $287, no max price cap set. Huge Airbnb interest, almost no conversion &mdash; pricing looks fair, so this points to the listing itself.</p>
+
+    <div class="duo">
+      <div class="m"><div class="pair">
+        <div class="col"><div class="val">58</div><div class="bar us low" style="height:58%"></div></div>
+        <div class="col"><div class="val">76</div><div class="bar mkt" style="height:76%"></div></div>
+      </div><div class="lbl">July</div></div>
+      <div class="m"><div class="pair">
+        <div class="col"><div class="val">52</div><div class="bar us low" style="height:52%"></div></div>
+        <div class="col"><div class="val">60</div><div class="bar mkt" style="height:60%"></div></div>
+      </div><div class="lbl">August</div></div>
+      <div class="m"><div class="pair">
+        <div class="col"><div class="val">0</div><div class="bar us low" style="height:2%"></div></div>
+        <div class="col"><div class="val">14</div><div class="bar mkt" style="height:14%"></div></div>
+      </div><div class="lbl">September</div></div>
+    </div>
+    <div class="legend">
+      <span><i style="background:var(--green)"></i>Loon Cabin</span>
+      <span><i style="background:#c9d8d2"></i>Market</span>
+      <span><i style="background:var(--rust)"></i>Behind market</span>
+    </div>
+
+    <p style="margin-top:16px;">RankBreeze ranks Loon Cabin <span class="em">#8 of 320</span>, with click-through nearly 5&times; similar listings (39.7% vs 8.4%) and wishlist adds slightly above the comp set. But booking rate is just <b>0.6% vs a 14.3% comp average</b> &mdash; the widest conversion gap in the portfolio, and it shows up on the all-channel PriceLabs numbers too (occupancy trails market at every horizon), so this isn't just an Airbnb-channel quirk &mdash; it's a real demand leak. Pricing sits close to the first-page competitor median ($408), so this doesn't read as a price problem.</p>
+
+    <ul class="clean">
+      <li>Occupancy gap widens the further out you look: 58% vs 76% market next 7 days, 38% vs 47% next 60, 28% vs 35% next 90.</li>
+      <li>Guests are clicking at nearly 5&times; the normal rate but not booking despite fair pricing &mdash; this pattern usually points to the listing page itself: cover photo, description hook, or review recency/count.</li>
+      <li>No max price cap is set (min $130, max blank) &mdash; same gap as Butterfield, worth closing.</li>
+      <li>4-night minimum stays are showing up on several October dates in a market where shorter stays are common that far out &mdash; worth checking whether the min-stay rule is suppressing bookings.</li>
+    </ul>
+
+    <div class="callout">
+      <div class="h">The fix</div>
+      <p>This isn't a pricing fix. Recommend a quick Airbnb listing audit &mdash; cover photo, first line of the description, and review count/recency &mdash; since demand is clearly present and pricing is already competitive.</p>
+    </div>
+  </section>
+
+  <!-- STAKES -->
+  <div class="stake">
+    <h2>What's on the Table</h2>
+    <p class="lead">Occupancy-gap revenue at the three catching-up properties, next 60&ndash;90 days.</p>
+    <div class="big">~$6.1K</div>
+    <div class="cap">Recoverable Revenue</div>
+    <div class="split">
+      <div>Butterfield<b>~$2,800</b></div>
+      <div>Loon Cabin<b>~$2,300</b></div>
+      <div>Golden Wings<b>~$1,000</b></div>
+    </div>
+  </div>
+
+  <!-- ACTION PLAN -->
+  <section>
+    <h2>This Week's Action Plan</h2>
+    <table>
+      <thead><tr><th>Property</th><th>Action</th><th>Urgency</th></tr></thead>
+      <tbody>
+        <tr><td>Loon Cabin</td><td>Airbnb listing audit &mdash; cover photo, description, review recency; check Oct 4-night minimums</td><td><span class="phase-tag hot">This week</span></td></tr>
+        <tr><td>Butterfield &amp; Loon Cabin</td><td>Set a max price cap &mdash; both are currently uncapped, the only two properties in the portfolio without one</td><td><span class="phase-tag hot">This week</span></td></tr>
+        <tr><td>Rustic Ridge</td><td>Confirm the 11 blocked Sept 16&ndash;24 / Oct 1&ndash;3 nights are intentional; release if not, given the surrounding Good/High demand color</td><td><span class="phase-tag hot">This week</span></td></tr>
+        <tr><td>Golden Wings</td><td>Enable last-minute discount (currently 0%, market suggests up to 38%)</td><td><span class="phase-tag watch">By Jul 30</span></td></tr>
+        <tr><td>Butterfield</td><td>Sanity-check the Aug 5 / Aug 10 / Aug 24 / Sept 1 / Sept 7 discount depth against intent (running 18&ndash;30% off, notes describe 5&ndash;10%)</td><td><span class="phase-tag watch">By Jul 30</span></td></tr>
+        <tr><td>Border Point</td><td>Confirm the 4 blocked Aug 10&ndash;13 dates are intentional; last booking was 9 days ago &mdash; keep an eye on pacing</td><td><span class="phase-tag watch">By Jul 30</span></td></tr>
+        <tr><td>Portfolio</td><td>Confirm Havilah House (Crosslake, 5BR) &mdash; active in OwnerRez, still not on the PriceLabs roster</td><td><span class="phase-tag watch">Ongoing</span></td></tr>
+      </tbody>
+    </table>
+  </section>
+
+  <p class="disclaimer">
+    Pulled live July 23, 2026 from PriceLabs (all-channel pricing &amp; pacing), OwnerRez (bookings &amp; channel mix) and RankBreeze (Airbnb search, three catching-up properties only). Recoverable-revenue figure is directional, based on occupancy-gap nights at recent ADR. Internal document, please don't forward outside the team. No pricing changes are made without Evan's approval.
+  </p>
+
+  <footer>
+    <div class="b">WEKYN STAYS</div>
+    <div style="margin-top:4px;">Boutique Luxury Vacation Rental Management &middot; Crosslake &amp; Brainerd Lakes, MN</div>
+    <div style="margin-top:8px;"><a href="https://www.wekynstays.com">wekynstays.com</a> &middot; Evan.wekynstays@gmail.com</div>
+  </footer>
+
+</div>
+</body>
+</html>
