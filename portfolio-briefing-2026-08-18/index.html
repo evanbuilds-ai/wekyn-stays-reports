@@ -1,0 +1,488 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="robots" content="noindex, nofollow">
+<title>WEKYN Stays · Weekly Portfolio Revenue Briefing · August 18, 2026</title>
+<style>
+  :root{
+    --green:#1f3c34;
+    --sage:#4b7c6b;
+    --sage-soft:#e7f0ec;
+    --ink:#20302b;
+    --muted:#6b7d76;
+    --line:#dfe7e3;
+    --bg:#f6f8f7;
+    --gold:#b8894b;
+    --rust:#b05a4a;
+    --card:#ffffff;
+  }
+  *{box-sizing:border-box;margin:0;padding:0}
+  body{
+    font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,Helvetica,Arial,sans-serif;
+    background:var(--bg);color:var(--ink);line-height:1.55;
+    -webkit-font-smoothing:antialiased;
+  }
+  .wrap{max-width:720px;margin:0 auto;background:var(--bg);}
+
+  header{background:var(--green);color:#fff;padding:28px 20px 24px;text-align:center;}
+  header .brand{font-size:13px;letter-spacing:3px;text-transform:uppercase;color:#bcd3ca;font-weight:600;}
+  header .tag{font-size:11px;letter-spacing:1.5px;text-transform:uppercase;color:#8fb0a5;margin-top:4px;}
+  header h1{font-size:20px;font-weight:700;margin-top:16px;line-height:1.3;}
+  header .sub{font-size:13px;color:#a9c6bc;margin-top:6px;}
+
+  h2{font-size:17px;color:var(--green);margin:0 0 4px;font-weight:700;}
+  .lead{font-size:14px;color:var(--muted);margin-bottom:16px;}
+  section{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:20px 18px;margin:16px 20px;}
+
+  .kpis{display:flex;gap:10px;flex-wrap:wrap;}
+  .kpi{flex:1;min-width:150px;background:var(--sage-soft);border-radius:12px;padding:14px 14px;text-align:center;}
+  .kpi .n{font-size:22px;font-weight:800;color:var(--green);}
+  .kpi .n .vs{font-size:13px;font-weight:700;color:var(--muted);}
+  .kpi .l{font-size:11px;text-transform:uppercase;letter-spacing:.8px;color:var(--sage);margin-top:3px;font-weight:600;}
+
+  .callout{background:#fff8ee;border:1px solid #f0dcc0;border-radius:10px;padding:14px 16px;margin-top:14px;}
+  .callout .h{font-weight:700;color:#8a6428;font-size:13px;margin-bottom:4px;}
+  .callout .h:before{content:"\25C6 ";color:var(--gold);font-size:10px;vertical-align:middle;}
+  .callout p{font-size:13.5px;color:#5c4a2e;}
+
+  p{font-size:14px;margin-bottom:10px;}
+  .em{background:var(--sage-soft);color:var(--green);font-weight:700;padding:1px 5px;border-radius:4px;}
+
+  table{width:100%;border-collapse:collapse;margin-top:6px;font-size:13px;}
+  th,td{text-align:left;padding:10px 8px;border-bottom:1px solid var(--line);vertical-align:top;}
+  th{font-size:11px;text-transform:uppercase;letter-spacing:.6px;color:var(--sage);font-weight:700;}
+  td.rev{font-weight:800;color:var(--green);white-space:nowrap;}
+  tr:last-child td{border-bottom:none;}
+  .tablewrap{overflow-x:auto;}
+
+  .phase-tag{display:inline-block;font-size:11px;font-weight:700;color:#fff;background:var(--sage);border-radius:20px;padding:2px 9px;white-space:nowrap;}
+  .phase-tag.hot{background:var(--rust);}
+  .phase-tag.watch{background:var(--gold);}
+
+  .comp{display:flex;justify-content:space-between;align-items:center;padding:10px 0;border-bottom:1px solid var(--line);gap:12px;}
+  .comp:last-child{border-bottom:none;}
+  .comp .name{font-size:13px;font-weight:600;color:var(--ink);}
+  .comp .meta{font-size:11.5px;color:var(--muted);margin-top:2px;}
+  .comp .fig{text-align:right;white-space:nowrap;}
+  .comp .fig .r{font-weight:800;color:var(--green);font-size:14px;}
+  .comp .fig .o{font-size:11px;color:var(--muted);}
+  .star{color:var(--gold);}
+
+  /* Us-vs-market paired bars */
+  .duo{display:flex;align-items:flex-end;gap:18px;height:130px;margin-top:16px;padding-top:6px;justify-content:center;}
+  .duo .m{display:flex;flex-direction:column;align-items:center;justify-content:flex-end;height:100%;width:110px;}
+  .duo .pair{display:flex;align-items:flex-end;gap:6px;height:100%;width:100%;justify-content:center;}
+  .duo .col{display:flex;flex-direction:column;align-items:center;justify-content:flex-end;height:100%;width:34px;}
+  .duo .bar{width:100%;border-radius:3px 3px 0 0;min-height:3px;}
+  .duo .bar.us{background:var(--green);}
+  .duo .bar.us.low{background:var(--rust);}
+  .duo .bar.mkt{background:#c9d8d2;}
+  .duo .val{font-size:10px;font-weight:700;color:var(--sage);margin-bottom:2px;}
+  .duo .lbl{font-size:10px;color:var(--muted);margin-top:5px;font-weight:600;}
+  .legend{display:flex;gap:16px;justify-content:center;margin-top:10px;font-size:11px;color:var(--muted);}
+  .legend i{display:inline-block;width:10px;height:10px;border-radius:2px;margin-right:5px;vertical-align:middle;}
+
+  ul.clean{list-style:none;margin-top:8px;}
+  ul.clean li{font-size:13.5px;padding:6px 0 6px 22px;position:relative;border-bottom:1px solid var(--line);}
+  ul.clean li:last-child{border-bottom:none;}
+  ul.clean li:before{content:"\203A";position:absolute;left:4px;color:var(--sage);font-weight:800;}
+
+  .stake{background:var(--green);color:#fff;border-radius:14px;padding:22px 18px;margin:16px 20px;text-align:center;}
+  .stake h2{color:#fff;}
+  .stake .lead{color:#a9c6bc;margin-bottom:6px;}
+  .stake .big{font-size:34px;font-weight:800;letter-spacing:-1px;margin-top:10px;}
+  .stake .cap{font-size:12px;color:#a9c6bc;text-transform:uppercase;letter-spacing:1px;margin-top:4px;}
+  .stake .split{display:flex;justify-content:center;gap:26px;margin-top:14px;font-size:12px;color:#cde3d9;flex-wrap:wrap;}
+  .stake .split b{display:block;font-size:16px;color:#fff;}
+
+  .disclaimer{font-size:11px;color:var(--muted);padding:6px 20px 30px;text-align:center;line-height:1.5;}
+  footer{background:var(--green);color:#a9c6bc;text-align:center;padding:22px 20px;font-size:12px;}
+  footer .b{color:#fff;font-weight:700;font-size:14px;letter-spacing:1px;}
+  footer a{color:#cde3d9;text-decoration:none;}
+</style>
+</head>
+<body>
+<div class="wrap">
+
+  <header>
+    <div class="brand">WEKYN Stays</div>
+    <div class="tag">Where Everyone Knows Your Name</div>
+    <h1>Weekly Portfolio Revenue Briefing</h1>
+    <div class="sub">Five properties · Crosslake, Emily, Aitkin &amp; Memphis · August 18, 2026<br>PriceLabs · OwnerRez · RankBreeze</div>
+  </header>
+
+  <!-- SNAPSHOT -->
+  <section>
+    <h2>The Snapshot</h2>
+    <p class="lead">Three of five homes are beating their markets on occupancy, and two are flagged red. The forward window runs August 19 through November 16.</p>
+    <div class="kpis">
+      <div class="kpi"><div class="n">26%</div><div class="l">Booked · Next 90 Nights</div></div>
+      <div class="kpi"><div class="n">$58.6K</div><div class="l">Forward Revenue · Next 90</div></div>
+      <div class="kpi"><div class="n">3 <span class="vs">of 5</span></div><div class="l">Outperforming Market</div></div>
+      <div class="kpi"><div class="n">0%</div><div class="l">Last-Minute Discount, All Five</div></div>
+    </div>
+    <div class="callout">
+      <div class="h">The one-line takeaway</div>
+      <p>Every property in the portfolio still has its last-minute discount set to <b>0%</b>, and PriceLabs is recommending 31&ndash;36% on all five. In a market where August books <em>2&ndash;6 days out</em> and September books <em>2&ndash;8 days out</em>, that one setting is the largest structural gap we have. It costs us most on the two red homes, where 158 of the next 90 nights sit open.</p>
+    </div>
+    <p style="margin-top:16px;">Of 450 forward room-nights across the five homes, <span class="em">112 are booked</span>, <span class="em">319 are open</span> and <span class="em">19 are blocked</span> for owner or maintenance holds. New booking activity in the last 15 days totalled 8 reservations worth <span class="em">$16,873</span>, concentrated in Border Point and Golden Wings.</p>
+  </section>
+
+  <!-- BORDER POINT LODGE -->
+  <section>
+    <h2>Border Point Lodge</h2>
+    <p class="lead">3BR &middot; Crosslake, Fawn Lake &middot; base $475 (PriceLabs recommends $474) &middot; min $249. Fully booked through Labor Day and pricing well above last year.</p>
+
+    <div class="duo">
+      <div class="m">
+        <div class="pair">
+          <div class="col"><div class="val">100</div><div class="bar us" style="height:100%"></div></div>
+          <div class="col"><div class="val">63</div><div class="bar mkt" style="height:63%"></div></div>
+        </div>
+        <div class="lbl">August</div>
+      </div>
+      <div class="m">
+        <div class="pair">
+          <div class="col"><div class="val">30</div><div class="bar us" style="height:30%"></div></div>
+          <div class="col"><div class="val">26</div><div class="bar mkt" style="height:26%"></div></div>
+        </div>
+        <div class="lbl">September</div>
+      </div>
+      <div class="m">
+        <div class="pair">
+          <div class="col"><div class="val">35</div><div class="bar us" style="height:35%"></div></div>
+          <div class="col"><div class="val">12</div><div class="bar mkt" style="height:12%"></div></div>
+        </div>
+        <div class="lbl">October</div>
+      </div>
+    </div>
+    <div class="legend">
+      <span><i style="background:var(--green)"></i>Border Point</span>
+      <span><i style="background:#c9d8d2"></i>Market</span>
+      <span><i style="background:var(--rust)"></i>Behind market</span>
+    </div>
+
+    <p style="margin-top:16px;">Forward revenue is <span class="em">$15,372</span> over the next 30 days against <span class="em">$13,752</span> the same time last year, a 12% gain, and year to date the home has produced <span class="em">$86,723</span> versus $80,296 last year. Forward ADR of $714 is running 16% ahead of last year's $613. The next 15 days are 100% occupied against a market at 53%.</p>
+
+    <ul class="clean">
+      <li><b>36 of the next 90 nights are booked</b>, 54 open, none blocked. October is the standout: 35% occupancy against a market at 12%, with four booked stays already on the calendar.</li>
+      <li><b>Labor Day weekend is still open.</b> September 5 is priced $928 against an algorithm recommendation of $1,027, and September 6 sits at $723 against $922. Both are flagged high demand. That is roughly $300 of premium left on two of the best remaining shoulder nights.</li>
+      <li><b>The September midweek discounts are working as designed.</b> Neil's August 15 overrides (September 7&ndash;10 at &minus;10%, September 13&ndash;15 at &minus;5%) are documented in the playbook and priced correctly against a soft midweek.</li>
+      <li><b>Last booking was August 6</b>, twelve days ago, though two reservations worth $6,955 landed inside the last 15 days. Pacing is healthy, not stalled.</li>
+      <li>The November and December holiday structure is solid: Thanksgiving and Christmas carry +25% with 4 to 7 night minimums. Those overrides predate the current notes entry and are not logged in the playbook.</li>
+    </ul>
+
+    <div class="callout">
+      <div class="h">The fix</div>
+      <p><b>1)</b> Let September 5&ndash;6 reprice toward the algorithm, recovering roughly $300 on the last big shoulder weekend. <b>2)</b> Turn on last-minute discounting; PriceLabs suggests up to 32% and the $249 minimum protects the floor. <b>3)</b> Log the holiday override set in the notes field so the playbook is complete.</p>
+    </div>
+  </section>
+
+  <!-- RUSTIC RIDGE LODGE -->
+  <section>
+    <h2>Rustic Ridge Lodge</h2>
+    <p class="lead">3BR &middot; Crosslake, Fawn Lake, pontoon included &middot; base $374 (PriceLabs recommends $373) &middot; min $200. Best year in the portfolio, and the calendar has gone quiet.</p>
+
+    <div class="duo">
+      <div class="m">
+        <div class="pair">
+          <div class="col"><div class="val">80</div><div class="bar us" style="height:80%"></div></div>
+          <div class="col"><div class="val">63</div><div class="bar mkt" style="height:63%"></div></div>
+        </div>
+        <div class="lbl">August</div>
+      </div>
+      <div class="m">
+        <div class="pair">
+          <div class="col"><div class="val">63</div><div class="bar us" style="height:63%"></div></div>
+          <div class="col"><div class="val">26</div><div class="bar mkt" style="height:26%"></div></div>
+        </div>
+        <div class="lbl">September</div>
+      </div>
+      <div class="m">
+        <div class="pair">
+          <div class="col"><div class="val">26</div><div class="bar us" style="height:26%"></div></div>
+          <div class="col"><div class="val">12</div><div class="bar mkt" style="height:12%"></div></div>
+        </div>
+        <div class="lbl">October</div>
+      </div>
+    </div>
+    <div class="legend">
+      <span><i style="background:var(--green)"></i>Rustic Ridge</span>
+      <span><i style="background:#c9d8d2"></i>Market</span>
+      <span><i style="background:var(--rust)"></i>Behind market</span>
+    </div>
+
+    <p style="margin-top:16px;">This is the portfolio's growth story. Year to date revenue is <span class="em">$65,716</span>&mdash;correction, <span class="em">$65,516</span>&mdash;against $40,259 last year, a <b>63% gain</b>. Forward ADR of $697 is 29% ahead of last year's $539, and RevPAR over the next 30 days is up 41%. Market Pricing Index over the next 60 days is <b>2.0</b>, the strongest reading of any WEKYN home.</p>
+
+    <ul class="clean">
+      <li><b>No new bookings in 22 days.</b> Last reservation was July 27. Booking pickup over the past 7 days is zero, and unique pickup over the past 15 days is zero. The strong forward numbers are stays booked earlier, not fresh demand.</li>
+      <li><b>Days 61 to 90 are completely empty.</b> Forward revenue for the next 60 days and the next 90 days are the same figure, $16,028, which means nothing at all is booked between October 18 and November 16.</li>
+      <li><b>16 nights are blocked</b> across September and October: September 9, 16&ndash;18, 21&ndash;24, October 1&ndash;3 and October 14&ndash;18. PriceLabs is flagging these directly. The October 14&ndash;18 block covers peak fall colors, priced $444&ndash;$535 a night.</li>
+      <li><b>The undocumented September premiums worked.</b> A +45% override on September 1&ndash;2 and +20% on September 3 and 10&ndash;12 are not in the notes field, and those dates booked. Worth logging before anyone assumes they were a mistake.</li>
+      <li>Two Airbnb cancellations in the past month (August 6 and August 9 arrivals) explain the open August 19 and August 31 nights.</li>
+    </ul>
+
+    <div class="callout">
+      <div class="h">The fix</div>
+      <p><b>1)</b> Confirm the 16 blocked nights with the owner, starting with October 14&ndash;18. If that fall-colors block is a leftover hold rather than an owner stay, releasing it is worth roughly $2,400. <b>2)</b> Enable last-minute discounting at up to 32% to work the 52 open nights. <b>3)</b> Log the September +45% and +20% overrides in the notes so the playbook reflects what is actually driving the ADR lift.</p>
+    </div>
+  </section>
+
+  <!-- GOLDEN WINGS -->
+  <section>
+    <h2>Golden Wings</h2>
+    <p class="lead">3BR &middot; Memphis, TN &middot; base $245 (PriceLabs recommends $244) &middot; min $120. Different market, different clock: Memphis books 0&ndash;6 days out.</p>
+
+    <div class="duo">
+      <div class="m">
+        <div class="pair">
+          <div class="col"><div class="val">87</div><div class="bar us" style="height:87%"></div></div>
+          <div class="col"><div class="val">64</div><div class="bar mkt" style="height:64%"></div></div>
+        </div>
+        <div class="lbl">August</div>
+      </div>
+      <div class="m">
+        <div class="pair">
+          <div class="col"><div class="val">33</div><div class="bar us" style="height:33%"></div></div>
+          <div class="col"><div class="val">31</div><div class="bar mkt" style="height:31%"></div></div>
+        </div>
+        <div class="lbl">September</div>
+      </div>
+      <div class="m">
+        <div class="pair">
+          <div class="col"><div class="val">42</div><div class="bar us" style="height:42%"></div></div>
+          <div class="col"><div class="val">16</div><div class="bar mkt" style="height:16%"></div></div>
+        </div>
+        <div class="lbl">October</div>
+      </div>
+    </div>
+    <div class="legend">
+      <span><i style="background:var(--green)"></i>Golden Wings</span>
+      <span><i style="background:#c9d8d2"></i>Market</span>
+      <span><i style="background:var(--rust)"></i>Behind market</span>
+    </div>
+
+    <p style="margin-top:16px;">Year to date revenue is <span class="em">$42,524</span> against $35,834 last year, up 19%, and forward ADR of $231 is 28% ahead of last year's $180. This is also the busiest listing for fresh demand: <b>21 nights picked up in the past 30 days</b>, four reservations worth $4,886 in the past 15, and a 12-night August stay booked on August 17 for an August 19 arrival.</p>
+
+    <div class="comp">
+      <div><div class="name"><span class="star">&#9733;</span> Aug 19&ndash;30 &middot; Airbnb</div><div class="meta">12 nights, booked 2 days out</div></div>
+      <div class="fig"><div class="r">$182</div><div class="o">ADR</div></div>
+    </div>
+    <div class="comp">
+      <div><div class="name">Oct 8&ndash;11 &middot; Airbnb</div><div class="meta">4 nights, booked June 11</div></div>
+      <div class="fig"><div class="r">$477</div><div class="o">ADR</div></div>
+    </div>
+    <div class="comp">
+      <div><div class="name">Sep 3&ndash;5 &middot; Airbnb</div><div class="meta">3 nights, booked July 13</div></div>
+      <div class="fig"><div class="r">$341</div><div class="o">ADR</div></div>
+    </div>
+    <div class="comp">
+      <div><div class="name">Sep 24&ndash;26 &middot; Airbnb</div><div class="meta">3 nights, booked July 28</div></div>
+      <div class="fig"><div class="r">$331</div><div class="o">ADR</div></div>
+    </div>
+
+    <p style="margin-top:14px;">Two things are pulling against an otherwise strong listing:</p>
+
+    <ul class="clean">
+      <li><b>Open nights are running 20&ndash;25% below the algorithm.</b> September 1 is priced $182 against a $240 recommendation, September 2 is $154 against $205, October 12 is $171 against $233, and November 10&ndash;11 sit at $396&ndash;$399 against $482&ndash;$484. August 31 has fallen all the way to the $130 minimum against a $205 recommendation. PriceLabs is telling us to raise prices on a listing at 87% August occupancy, and the settings are doing the opposite.</li>
+      <li><b>Five cancellations in the past 30 days</b> out of 19 bookings, three from Airbnb, one from Savvy and one direct. That is well above the 5% benchmark and it is quietly eating the forward book: revenue over the next 90 days is $9,619 against $14,636 last year.</li>
+      <li><b>Three-night minimums run across most of October and November</b> in a market that books 0 to 6 days out. Short-window guests cannot reach this calendar.</li>
+      <li>This is the cleanest listing we have on configuration: <b>zero date overrides</b>, base within a dollar of the recommendation.</li>
+    </ul>
+
+    <div class="callout">
+      <div class="h">The fix</div>
+      <p><b>1)</b> Find the setting pulling open nights 20&ndash;25% under the algorithm and relax it; at 87% occupancy this home should be pricing up, not down. <b>2)</b> Review the cancellation policy and the last five cancellations for a pattern. <b>3)</b> Test 3-night minimums down to 2 for October midweek, where the booking window is measured in days.</p>
+    </div>
+  </section>
+
+  <!-- BUTTERFIELD RETREAT -->
+  <section>
+    <h2>Butterfield Retreat</h2>
+    <p class="lead">4BR &middot; Emily, MN &middot; base $400 (PriceLabs recommends $389) &middot; min $200. <b style="color:var(--rust)">Flagged red.</b> The calendar goes empty after September 1.</p>
+
+    <div class="duo">
+      <div class="m">
+        <div class="pair">
+          <div class="col"><div class="val">60</div><div class="bar us low" style="height:60%"></div></div>
+          <div class="col"><div class="val">68</div><div class="bar mkt" style="height:68%"></div></div>
+        </div>
+        <div class="lbl">August</div>
+      </div>
+      <div class="m">
+        <div class="pair">
+          <div class="col"><div class="val">10</div><div class="bar us low" style="height:10%"></div></div>
+          <div class="col"><div class="val">30</div><div class="bar mkt" style="height:30%"></div></div>
+        </div>
+        <div class="lbl">September</div>
+      </div>
+      <div class="m">
+        <div class="pair">
+          <div class="col"><div class="val">0</div><div class="bar us low" style="height:2%"></div></div>
+          <div class="col"><div class="val">14</div><div class="bar mkt" style="height:14%"></div></div>
+        </div>
+        <div class="lbl">October</div>
+      </div>
+    </div>
+    <div class="legend">
+      <span><i style="background:var(--green)"></i>Butterfield</span>
+      <span><i style="background:#c9d8d2"></i>Market</span>
+      <span><i style="background:var(--rust)"></i>Behind market</span>
+    </div>
+
+    <p style="margin-top:16px;">Forward revenue reads <span class="em">$5,453</span> at 30 days, 60 days and 90 days. The three figures being identical means the honest version: <b>nothing at all is booked after September 1</b>. Only 7 of the next 90 nights are reserved, 80 are open, and Market Pricing Index over 90 days sits at <b>0.5</b>, half of market pace.</p>
+
+    <p>Here is what makes this one worth a careful hand rather than a bigger discount. RankBreeze shows the Airbnb funnel in detail:</p>
+
+    <div class="comp">
+      <div><div class="name">Airbnb city rank</div><div class="meta">Page 1 placement, Emily market</div></div>
+      <div class="fig"><div class="r">#7 of 320</div><div class="o">strong</div></div>
+    </div>
+    <div class="comp">
+      <div><div class="name">Click-through rate</div><div class="meta">vs 12.6% for similar listings</div></div>
+      <div class="fig"><div class="r">33.5%</div><div class="o">2.7&times; peers</div></div>
+    </div>
+    <div class="comp">
+      <div><div class="name">First-page impressions</div><div class="meta">vs 2,635 for similar listings</div></div>
+      <div class="fig"><div class="r">1,734</div><div class="o">34% behind</div></div>
+    </div>
+    <div class="comp">
+      <div><div class="name">Booking rate</div><div class="meta">vs 10.2% for similar listings</div></div>
+      <div class="fig"><div class="r">2.1%</div><div class="o">one fifth</div></div>
+    </div>
+
+    <ul class="clean">
+      <li><b>September has already gone dark on Airbnb.</b> Click-through collapsed from 69.3% in August to 11.4% in September, listing views fell to 96 for the whole month, and wishlist adds went to zero. Impressions are running a third behind similar listings.</li>
+      <li><b>The discounts are already stacked and are not converting.</b> August 23&ndash;26 carry &minus;15%, August 30 through September 3 carry &minus;10%, September 7&ndash;10 carry &minus;5%. August 23&ndash;26 remain open. More discount is not the answer here.</li>
+      <li><b>We are not expensive.</b> The first-page competitor median in this market is $456. Butterfield's open September nights mostly price $247&ndash;$465. The problem is that almost nobody is seeing the listing, not what it costs.</li>
+      <li><b>Labor Day weekend is blocked.</b> September 4&ndash;6 are held out, and at algorithm pricing of $537&ndash;$617 those three nights are worth roughly $1,770 on the best remaining shoulder weekend of the year.</li>
+      <li><b>Minimum stays are heavy for a red listing:</b> 4 nights on October 18&ndash;19, and 3 nights across October 15&ndash;17, 22&ndash;24, 29&ndash;31 and most of November.</li>
+      <li>Last booking was August 3, fifteen days ago. Base price is $400 against a $389 recommendation, a small premium worth trimming.</li>
+    </ul>
+
+    <div class="callout">
+      <div class="h">The fix</div>
+      <p><b>1)</b> Confirm whether the September 4&ndash;6 Labor Day block is a real owner stay. If it is a leftover hold, unblock it today; it is the single highest-value weekend left on this calendar. <b>2)</b> Stop adding discount and work the top of the funnel instead: impressions are behind peers and September views were 96 for the month, so this is a listing-visibility problem. <b>3)</b> Relax the 3 and 4 night minimums through October and November. <b>4)</b> Enable last-minute discounting at up to 31%, which will work the open nights automatically rather than through more manual overrides.</p>
+    </div>
+  </section>
+
+  <!-- LOON CABIN -->
+  <section>
+    <h2>Loon Cabin</h2>
+    <p class="lead">5BR &middot; Aitkin, Ripple Lake &middot; base $287 (PriceLabs recommends $286) &middot; min $130. <b style="color:var(--rust)">Flagged red.</b> The next seven nights are completely empty.</p>
+
+    <div class="duo">
+      <div class="m">
+        <div class="pair">
+          <div class="col"><div class="val">20</div><div class="bar us low" style="height:20%"></div></div>
+          <div class="col"><div class="val">62</div><div class="bar mkt" style="height:62%"></div></div>
+        </div>
+        <div class="lbl">August</div>
+      </div>
+      <div class="m">
+        <div class="pair">
+          <div class="col"><div class="val">0</div><div class="bar us low" style="height:2%"></div></div>
+          <div class="col"><div class="val">29</div><div class="bar mkt" style="height:29%"></div></div>
+        </div>
+        <div class="lbl">September</div>
+      </div>
+      <div class="m">
+        <div class="pair">
+          <div class="col"><div class="val">6</div><div class="bar us low" style="height:6%"></div></div>
+          <div class="col"><div class="val">10</div><div class="bar mkt" style="height:10%"></div></div>
+        </div>
+        <div class="lbl">October</div>
+      </div>
+    </div>
+    <div class="legend">
+      <span><i style="background:var(--green)"></i>Loon Cabin</span>
+      <span><i style="background:#c9d8d2"></i>Market</span>
+      <span><i style="background:var(--rust)"></i>Behind market</span>
+    </div>
+
+    <p style="margin-top:16px;">Occupancy over the next 7 days is <b style="color:var(--rust)">0%</b> against a market at 63%, and over the next 30 days it is 10% against 44%. RevPAR over the next 30 days is $36, the lowest in the portfolio. Only 12 of the next 90 nights are booked.</p>
+
+    <p>Before anyone reaches for a price cut, the Airbnb funnel says the opposite:</p>
+
+    <div class="comp">
+      <div><div class="name">Airbnb city rank</div><div class="meta">Page 1 placement, Aitkin market</div></div>
+      <div class="fig"><div class="r">#6 of 320</div><div class="o">excellent</div></div>
+    </div>
+    <div class="comp">
+      <div><div class="name">Click-through rate</div><div class="meta">vs 8.9% for similar listings</div></div>
+      <div class="fig"><div class="r">24.0%</div><div class="o">2.7&times; peers</div></div>
+    </div>
+    <div class="comp">
+      <div><div class="name">First-page impressions</div><div class="meta">vs 3,678 for similar listings</div></div>
+      <div class="fig"><div class="r">5,036</div><div class="o">37% ahead</div></div>
+    </div>
+    <div class="comp">
+      <div><div class="name">Booking rate</div><div class="meta">vs 18.4% for similar listings</div></div>
+      <div class="fig"><div class="r">5.5%</div><div class="o">one third</div></div>
+    </div>
+
+    <ul class="clean">
+      <li><b>Guests are finding it and clicking it.</b> More impressions than peers, click-through at nearly three times the peer rate, wishlists at par. Visibility is not the problem on this home.</li>
+      <li><b>They are not booking.</b> Booking rate is one third of similar listings, and PriceLabs confirms those dates are genuinely open rather than filled on another channel. This is a conversion leak, not a channel-mix story.</li>
+      <li><b>We are already priced under the comp set.</b> The first-page competitor median is $451. Loon's open late-August nights run $269&ndash;$410 and September runs $219&ndash;$526. Cutting further would give away rate without fixing the actual gap.</li>
+      <li><b>Open September nights are priced above the algorithm, though.</b> September 1 sits at $289 against a $203 recommendation, September 2 at $282 against $199, September 3 at $298 against $222. That is a real gap on a month currently at 0%.</li>
+      <li><b>Demand has fallen off a cliff since July.</b> Airbnb occupancy went 69.6% in July, 28.6% in August, 0% in September. Listing views went 1,836, then 1,280, then 216. Wishlists went 29, then 10, then 0.</li>
+      <li><b>The playbook is badly out of date.</b> There are 38 active date overrides and the notes field documents only the July 2027 set. Undocumented entries include December 17 at +75%, December 18&ndash;19 at +45% and December 20 at +60%, plus June 2027 premiums and the October minimum-stay bumps.</li>
+      <li>Bookings <i>are</i> still arriving, they are just landing outside this window: 17 nights picked up in the past 30 days, most recently August 11, and none of it falls inside August 19 to November 16.</li>
+    </ul>
+
+    <div class="callout">
+      <div class="h">The fix</div>
+      <p><b>1)</b> Do not cut the headline price. Rank #6 of 320 and a 24% click-through say guests want this home; something after the click is losing them. Audit the listing itself: photo order beyond the hero image, review count and recency, house rules, and how the accessibility framing reads to a family group. <b>2)</b> Let the September 1&ndash;3 nights reprice down toward the algorithm, which is a $75&ndash;$85 per night gap on a month at zero. <b>3)</b> Enable last-minute discounting at up to 31%; the $130 minimum guards the floor and the next seven nights are the immediate test. <b>4)</b> Log the December and June 2027 overrides in the notes field.</p>
+    </div>
+  </section>
+
+  <!-- STAKES -->
+  <div class="stake">
+    <h2>What's on the Table</h2>
+    <p class="lead">Open and held nights across the five homes, valued at algorithm and recently converting rates.</p>
+    <div class="big">~$13.7K</div>
+    <div class="cap">Recoverable Revenue, Next 90 Days</div>
+    <div class="split">
+      <div>Butterfield<b>80 open nights</b></div>
+      <div>Loon Cabin<b>78 open nights</b></div>
+      <div>Held inventory<b>19 blocked nights</b></div>
+    </div>
+  </div>
+
+  <!-- ACTION PLAN -->
+  <section>
+    <h2>This Week's Action Plan</h2>
+    <p class="lead">Nothing below has been applied. These are recommendations for Evan to approve.</p>
+    <div class="tablewrap">
+    <table>
+      <thead><tr><th>Property</th><th>Action</th><th>Urgency</th></tr></thead>
+      <tbody>
+        <tr><td>All five</td><td>Enable last-minute discounting; PriceLabs recommends 31&ndash;36% and every home sits at 0%</td><td><span class="phase-tag hot">This week</span></td></tr>
+        <tr><td>Butterfield</td><td>Confirm the Sept 4&ndash;6 Labor Day block. Unblock if it is a leftover hold (~$1,770)</td><td><span class="phase-tag hot">This week</span></td></tr>
+        <tr><td>Loon Cabin</td><td>Listing-content audit, not a price cut. Rank #6, CTR 24%, booking rate 5.5%</td><td><span class="phase-tag hot">This week</span></td></tr>
+        <tr><td>Rustic Ridge</td><td>Confirm the 16 blocked Sept&ndash;Oct nights with the owner, starting with Oct 14&ndash;18 (~$2,400)</td><td><span class="phase-tag hot">This week</span></td></tr>
+        <tr><td>Border Point</td><td>Let Sept 5&ndash;6 reprice toward algorithm; currently $99&ndash;$199 under on a high-demand weekend</td><td><span class="phase-tag hot">This week</span></td></tr>
+        <tr><td>Golden Wings</td><td>Find the setting holding open nights 20&ndash;25% under algorithm at 87% occupancy</td><td><span class="phase-tag watch">By Aug 25</span></td></tr>
+        <tr><td>Golden Wings</td><td>Review 5 cancellations in 30 days for a pattern in policy or guest fit</td><td><span class="phase-tag watch">By Aug 25</span></td></tr>
+        <tr><td>Loon &amp; Rustic Ridge</td><td>Log undocumented overrides in the PriceLabs notes field</td><td><span class="phase-tag watch">By Aug 25</span></td></tr>
+      </tbody>
+    </table>
+    </div>
+  </section>
+
+  <p class="disclaimer">
+    Pulled live August 18, 2026 from PriceLabs (all-channel pricing and pacing), OwnerRez (bookings, channel mix and cancellations) and RankBreeze (Airbnb search funnel only). RankBreeze occupancy and booking-rate figures describe the Airbnb channel and have been reconciled against PriceLabs booked dates before any conclusion was drawn. Avari's Crossing is excluded from this briefing. Recoverable-revenue figure is directional, based on open-night counts at algorithm and recently converting rates. Internal document, please don't forward outside the team. No pricing changes are made without Evan's approval.
+  </p>
+
+  <footer>
+    <div class="b">WEKYN STAYS</div>
+    <div style="margin-top:4px;">Boutique Luxury Vacation Rental Management &middot; Crosslake &amp; Brainerd Lakes, MN</div>
+    <div style="margin-top:8px;"><a href="https://www.wekynstays.com">wekynstays.com</a> &middot; Evan.wekynstays@gmail.com</div>
+  </footer>
+
+</div>
+</body>
+</html>
