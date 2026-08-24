@@ -1,0 +1,667 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>WEKYN Portfolio — Weekly Portfolio Revenue Briefing — August 23, 2026</title>
+<style>
+  /* ═══ WEKYN STAYS report system — forest-green comp-report standard ═══
+     Generated deliverable — do not hand-edit; rebuild from the template. */
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+  :root {
+    --forest:      #1f3c34;   /* deep forest — headers, primary */
+    --forest-deep: #23312c;   /* darkest ink-green */
+    --sage:        #4b7c6b;   /* sage accent */
+    --sage-pale:   #eef3ef;   /* pale sage wash */
+    --sage-mist:   #cfe0d8;   /* sage border */
+    --green:       #2e7d4f;   /* pass / positive */
+    --gold:        #8a6d1f;   /* WEKYN gold — highlights */
+    --gold-pale:   #fdf8ec;   /* cream gold wash */
+    --gold-soft:   #ecdfc0;   /* gold border */
+    --clay:        #b5583f;   /* terracotta — flags / urgent */
+    --clay-pale:   #f9ede9;   /* clay wash */
+    --stone:       #8a8577;   /* warm gray — secondary text */
+    --mist:        #6b7a72;   /* green-gray — captions */
+    --cream:       #f7f5f0;   /* page */
+    --linen:       #efece3;   /* panel */
+    --sand:        #e6e1d5;   /* rules / borders */
+    --paper:       #fffdf9;   /* card surface */
+  }
+
+  body {
+    font-family: 'Avenir Next', 'Segoe UI', -apple-system, sans-serif;
+    font-size: 14px;
+    line-height: 1.55;
+    color: var(--forest-deep);
+    background: var(--cream);
+    -webkit-font-smoothing: antialiased;
+  }
+
+  .report {
+    max-width: 940px;
+    margin: 0 auto;
+    background: var(--paper);
+    box-shadow: 0 6px 36px rgba(31, 60, 52, 0.16);
+  }
+
+  /* ─── Header ─── */
+  .hero {
+    background: linear-gradient(135deg, var(--forest) 0%, var(--forest-deep) 100%);
+    color: #fff;
+    padding: 42px 46px 30px;
+  }
+  .wordmark {
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: 4px;
+    text-transform: uppercase;
+    color: var(--gold-soft);
+    margin-bottom: 14px;
+  }
+  .wordmark span { color: #fff; opacity: 0.55; letter-spacing: 2px; font-weight: 500; }
+  .hero h1 {
+    font-size: 38px;
+    font-weight: 700;
+    line-height: 1.08;
+    letter-spacing: -0.5px;
+    margin-bottom: 6px;
+  }
+  .hero .market {
+    font-size: 13px;
+    font-weight: 500;
+    color: var(--sage-mist);
+    letter-spacing: 0.4px;
+  }
+  .hero-rule { height: 1px; background: rgba(255,255,255,0.16); margin: 22px 0 18px; }
+  .meta { display: flex; flex-wrap: wrap; }
+  .meta div {
+    font-size: 10.5px;
+    font-weight: 600;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    color: rgba(255,255,255,0.55);
+    padding-right: 26px;
+    margin-right: 26px;
+    border-right: 1px solid rgba(255,255,255,0.15);
+  }
+  .meta div:last-child { border-right: none; margin-right: 0; padding-right: 0; }
+  .meta b {
+    display: block;
+    font-size: 15px;
+    font-weight: 700;
+    color: #fff;
+    text-transform: none;
+    letter-spacing: 0;
+    margin-top: 3px;
+  }
+  .meta b.gold { color: #d9bd6a; }
+
+  /* ─── Score band ─── */
+  .score-band {
+    background: var(--gold);
+    color: #fff;
+    padding: 12px 46px;
+    display: flex;
+    align-items: center;
+    gap: 18px;
+    flex-wrap: wrap;
+  }
+  .score-band .label { font-size: 11px; font-weight: 700; letter-spacing: 1.5px; text-transform: uppercase; opacity: 0.85; }
+  .score-band .num { font-size: 24px; font-weight: 800; letter-spacing: -0.5px; }
+  .score-band .desc { font-size: 12.5px; font-weight: 500; flex: 1; opacity: 0.95; }
+
+  /* ─── Opportunity banner ─── */
+  .opportunity {
+    background: var(--sage);
+    color: #fff;
+    padding: 15px 46px;
+    font-size: 13px;
+    font-weight: 600;
+    line-height: 1.45;
+  }
+  .opportunity::before { content: '✦  '; color: var(--gold-soft); }
+
+  /* ─── Body ─── */
+  .body { padding: 34px 46px 50px; }
+
+  /* KPI cards */
+  .kpis {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(138px, 1fr));
+    gap: 10px;
+    margin-bottom: 30px;
+  }
+  .kpi {
+    background: var(--forest);
+    border-radius: 6px;
+    padding: 14px 14px 12px;
+    border-bottom: 3px solid var(--sage);
+  }
+  .kpi.gold  { border-bottom-color: #d9bd6a; }
+  .kpi.green { border-bottom-color: #5eae82; }
+  .kpi.clay  { border-bottom-color: var(--clay); }
+  .kpi .k-label { font-size: 9px; font-weight: 700; letter-spacing: 1.3px; text-transform: uppercase; color: var(--sage-mist); opacity: 0.8; margin-bottom: 5px; }
+  .kpi .k-value { font-size: 22px; font-weight: 800; color: #fff; letter-spacing: -0.5px; line-height: 1; }
+  .kpi.gold  .k-value { color: #d9bd6a; }
+  .kpi.green .k-value { color: #7fc9a0; }
+  .kpi.clay  .k-value { color: #e5a896; }
+  .kpi .k-sub { font-size: 10px; color: var(--sage-mist); opacity: 0.7; margin-top: 4px; }
+
+  /* Sections */
+  .section { margin-bottom: 36px; }
+  .sec-head {
+    display: flex;
+    align-items: center;
+    border-radius: 5px;
+    overflow: hidden;
+    margin-bottom: 14px;
+  }
+  .sec-mark {
+    width: 40px;
+    align-self: stretch;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 13px;
+    font-weight: 800;
+    color: #fff;
+    background: var(--sage);
+  }
+  .sec-head.pass  .sec-mark { background: var(--green); }
+  .sec-head.watch .sec-mark { background: var(--gold); }
+  .sec-head.flag  .sec-mark { background: var(--clay); }
+  .sec-head.na    .sec-mark { background: var(--stone); }
+  .sec-title {
+    flex: 1;
+    background: var(--forest);
+    color: #fff;
+    padding: 10px 16px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 12px;
+  }
+  .sec-title h2 { font-size: 13.5px; font-weight: 700; letter-spacing: 0.6px; text-transform: uppercase; }
+  .pill {
+    font-size: 10px;
+    font-weight: 800;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    padding: 3px 10px;
+    border-radius: 20px;
+    white-space: nowrap;
+  }
+  .pill-pass  { background: var(--green); color: #fff; }
+  .pill-watch { background: var(--gold);  color: #fff; }
+  .pill-flag  { background: var(--clay);  color: #fff; }
+  .pill-na    { background: var(--stone); color: #fff; }
+
+  /* Tables */
+  table { width: 100%; border-collapse: collapse; font-size: 13px; margin-bottom: 10px; }
+  thead th {
+    background: var(--sage-pale);
+    color: var(--forest);
+    font-size: 10px;
+    font-weight: 700;
+    letter-spacing: 1.1px;
+    text-transform: uppercase;
+    text-align: left;
+    padding: 9px 12px;
+    border-bottom: 2px solid var(--sage-mist);
+  }
+  tbody td {
+    padding: 9px 12px;
+    border-bottom: 1px solid var(--sand);
+    vertical-align: top;
+    line-height: 1.45;
+  }
+  tbody tr:nth-child(even) { background: var(--cream); }
+
+  /* Status chips */
+  .st { display: inline-block; font-size: 11px; font-weight: 700; padding: 2px 8px; border-radius: 3px; white-space: nowrap; }
+  .st-pass  { background: #e4f0e8; color: var(--green); }
+  .st-watch { background: var(--gold-pale); color: var(--gold); }
+  .st-flag  { background: var(--clay-pale); color: var(--clay); }
+  .st-na    { background: var(--linen); color: var(--stone); }
+
+  /* Callouts */
+  .callout {
+    border-radius: 5px;
+    padding: 13px 16px;
+    margin: 10px 0;
+    font-size: 13px;
+    line-height: 1.55;
+  }
+  .callout.note    { background: var(--sage-pale); border: 1px solid var(--sage-mist); }
+  .callout.gold    { background: var(--gold-pale); border: 1px solid var(--gold-soft); }
+  .callout.urgent  { background: var(--clay-pale); border: 1px solid #e0b7a9; }
+  .callout .c-title { font-weight: 700; font-size: 11px; letter-spacing: 0.8px; text-transform: uppercase; margin-bottom: 4px; }
+  .callout.note   .c-title { color: var(--sage); }
+  .callout.gold   .c-title { color: var(--gold); }
+  .callout.urgent .c-title { color: var(--clay); }
+
+  /* Action list (fix list) */
+  .action {
+    display: flex;
+    gap: 12px;
+    align-items: flex-start;
+    background: var(--paper);
+    border: 1px solid var(--sand);
+    border-radius: 5px;
+    padding: 12px 14px;
+    margin-bottom: 6px;
+    font-size: 13px;
+  }
+  .action.hot { background: var(--gold-pale); border-color: var(--gold-soft); }
+  .action.urgent { background: var(--clay-pale); border-color: #e0b7a9; }
+  .a-id {
+    font-size: 11px;
+    font-weight: 800;
+    min-width: 30px;
+    height: 22px;
+    padding: 0 6px;
+    border-radius: 12px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: var(--forest);
+    color: #d9bd6a;
+    margin-top: 1px;
+  }
+  .action.hot .a-id { background: var(--gold); color: #fff; }
+  .action.urgent .a-id { background: var(--clay); color: #fff; }
+  .a-body { flex: 1; }
+  .a-title { font-weight: 700; }
+  .a-detail { color: #4a5650; margin-top: 2px; font-size: 12.5px; }
+  .a-tags { display: flex; gap: 6px; margin-top: 6px; flex-wrap: wrap; }
+  .tag {
+    font-size: 9px;
+    font-weight: 800;
+    letter-spacing: 0.7px;
+    text-transform: uppercase;
+    padding: 2px 7px;
+    border-radius: 3px;
+  }
+  .tag-impact-high { background: var(--clay);  color: #fff; }
+  .tag-impact-med  { background: var(--gold);  color: #fff; }
+  .tag-impact-low  { background: var(--stone); color: #fff; }
+  .tag-api  { background: var(--sage);   color: #fff; }
+  .tag-ui   { background: var(--forest); color: #d9bd6a; }
+  .tag-when { background: var(--linen);  color: var(--mist); }
+
+  /* Wins */
+  .wins { list-style: none; }
+  .wins li {
+    padding: 8px 0 8px 26px;
+    position: relative;
+    border-bottom: 1px solid var(--sand);
+    font-size: 13px;
+  }
+  .wins li::before { content: '✓'; position: absolute; left: 4px; color: var(--green); font-weight: 800; }
+
+  /* Footer */
+  .foot {
+    background: var(--forest);
+    color: var(--sage-mist);
+    font-size: 11px;
+    padding: 16px 46px;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 8px;
+  }
+  .foot .fm { color: var(--gold-soft); letter-spacing: 2px; text-transform: uppercase; font-weight: 700; font-size: 10px; }
+
+  @media print {
+    body { background: #fff; }
+    .report { box-shadow: none; max-width: 100%; }
+    .section { page-break-inside: avoid; }
+    .hero, thead th, .sec-mark, .sec-title, .kpi, .score-band, .opportunity { -webkit-print-color-adjust: exact; print-color-adjust: exact; }
+  }
+  @media (max-width: 640px) {
+    .hero, .body, .foot, .score-band, .opportunity { padding-left: 20px; padding-right: 20px; }
+    .hero h1 { font-size: 27px; }
+    .kpis { grid-template-columns: 1fr 1fr; }
+    .meta { flex-direction: column; gap: 10px; }
+    .meta div { border-right: none; }
+  }
+</style>
+</head>
+<body>
+<div class="report">
+
+  <div class="hero">
+    <div class="wordmark">WEKYN Stays <span>· Where Everyone Knows Your Name</span></div>
+    <h1>WEKYN Portfolio</h1>
+    <div class="market">Weekly Portfolio Revenue Briefing · Crosslake &amp; Brainerd Lakes, MN · Memphis, TN</div>
+    <div class="hero-rule"></div>
+    <div class="meta">
+      <div>Date <b>August 23, 2026</b></div>
+      <div>Score <b class="gold">6/10</b></div>
+      <div>Status <b>3 strong · 2 red</b></div>
+      <div>Actions <b>13</b></div>
+      <div>Data <b>PL / OR / RB</b></div>
+    </div>
+  </div>
+
+  <div class="score-band">
+    <span class="label">Bottom line</span>
+    <span class="num">6/10</span>
+    <span class="desc">Three homes beating their markets, two flagged red &mdash; and Butterfield's forward book has fallen to $1,712.</span>
+  </div>
+
+  <div class="opportunity">Butterfield Retreat is priced 22&ndash;51% above PriceLabs' own recommendation on 84 open nights while pacing at one-third of its market. Repricing to the algorithm is worth roughly <b>$5,000</b> over the next 90 days &mdash; the largest single item in a total of about <b>$15,800</b> recoverable across the portfolio.</div>
+
+  <div class="body">
+
+    <div class="kpis">
+            <div class="kpi clay">
+        <div class="k-label">Booked · Next 90</div>
+        <div class="k-value">24%</div>
+        <div class="k-sub">102 of 434 bookable nights</div>
+      </div>
+      <div class="kpi">
+        <div class="k-label">Forward Revenue · 90d</div>
+        <div class="k-value">$48.6K</div>
+        <div class="k-sub">across the five homes</div>
+      </div>
+      <div class="kpi green">
+        <div class="k-label">Revenue YTD</div>
+        <div class="k-value">$244.9K</div>
+        <div class="k-sub">+12% on comparable homes</div>
+      </div>
+      <div class="kpi clay">
+        <div class="k-label">Red-Flagged</div>
+        <div class="k-value">2 of 5</div>
+        <div class="k-sub">Butterfield &amp; Loon Cabin</div>
+      </div>
+      <div class="kpi clay">
+        <div class="k-label">Last-Minute Discount</div>
+        <div class="k-value">0%</div>
+        <div class="k-sub">all five · PriceLabs wants 27&ndash;37%</div>
+      </div>
+      <div class="kpi green">
+        <div class="k-label">Direct Share · 30d</div>
+        <div class="k-value">17%</div>
+        <div class="k-sub">$6,756 of $39,716 booked</div>
+      </div>
+    </div>
+
+        <div class="section">
+      <div class="sec-head watch">
+        <div class="sec-mark">A</div>
+        <div class="sec-title"><h2>Portfolio Pacing &amp; Inventory</h2><span class="pill pill-watch">Watch</span></div>
+      </div>
+      <table>
+        <thead><tr><th style="width:26%">Check</th><th style="width:13%">Status</th><th>Detail</th></tr></thead>
+        <tbody>
+          <tr><td>Forward inventory</td><td><span class="st st-watch">Watch</span></td><td>Across Aug 24 &ndash; Nov 21: <b>102 booked</b>, <b>332 open</b>, <b>16 blocked</b> of 450 room-nights. That is 24% of bookable inventory sold.</td></tr>
+          <tr><td>Forward revenue</td><td><span class="st st-watch">Watch</span></td><td>$32,173 over the next 30 days, $48,583 over the next 90. Butterfield contributes $1,712 of that 90-day figure.</td></tr>
+          <tr><td>Revenue YTD</td><td><span class="st st-pass">Pass</span></td><td>$244,866 portfolio-wide. On the two homes with last-year comparables, $135,100 vs $120,270 &mdash; <b>up 12.3%</b>.</td></tr>
+          <tr><td>Market outperformance</td><td><span class="st st-pass">Pass</span></td><td>Three of five beat their market on next-90 occupancy: Border Point 36% vs 20%, Rustic Ridge 39% vs 20%, Golden Wings 39% vs 22%.</td></tr>
+          <tr><td>Last-minute factor</td><td><span class="st st-flag">Flag</span></td><td><b>0% on all five properties.</b> PriceLabs recommends 27% (Crosslake), 29% (Aitkin), 31% (Emily) and 37% (Memphis). September books 1&ndash;7 days out in Crosslake and 0&ndash;3 days out in Memphis.</td></tr>
+          <tr><td>Drift detection</td><td><span class="st st-pass">Pass</span></td><td>Border Point ladder ($249 / $475 / $1,650) and all 39 date overrides match the 2026-08-22 snapshot exactly. No unexplained changes. The other four had no prior baseline and are being snapshotted this run.</td></tr>
+        </tbody>
+      </table>
+      <div class="callout note"><div class="c-title">Read</div>The portfolio is genuinely two portfolios. Border Point, Rustic Ridge and Golden Wings are all pacing well ahead of their markets on occupancy and ADR. Butterfield and Loon Cabin together hold 160 of the 332 open nights.</div>
+    </div>
+
+    <div class="section">
+      <div class="sec-head watch">
+        <div class="sec-mark">B</div>
+        <div class="sec-title"><h2>Border Point Lodge</h2><span class="pill pill-watch">Watch</span></div>
+      </div>
+      <table>
+        <thead><tr><th style="width:26%">Check</th><th style="width:13%">Status</th><th>Detail</th></tr></thead>
+        <tbody>
+          <tr><td>Occupancy</td><td><span class="st st-pass">Pass</span></td><td>Next 7 days <b>100%</b> vs market 48%. Next 15 87% vs 41%. Next 90 36% vs 20%. MPI 1.8.</td></tr>
+          <tr><td>Revenue</td><td><span class="st st-pass">Pass</span></td><td>Next 30 $12,382 vs $11,544 same time last year (+7%). YTD $91,667 vs $83,789 (<b>+9.4%</b>).</td></tr>
+          <tr><td>ADR</td><td><span class="st st-pass">Pass</span></td><td>Forward 45-day ADR $690 vs $589 last year, <b>up 17%</b>.</td></tr>
+          <tr><td>Booking pickup</td><td><span class="st st-flag">Flag</span></td><td><b>Zero new bookings in 17 days.</b> Last booked Aug 6. PriceLabs pickup over the past 7 days is 0 and unique pickup over 15 days is 0; OwnerRez agrees. Forward 90-day revenue is $19,667 vs $23,084 last year (&minus;15%).</td></tr>
+          <tr><td>Labor Day weekend</td><td><span class="st st-flag">Flag</span></td><td>Sept 5 and 6 are still open at $780 and $650 against algorithm recommendations of $995 and $963. Both flagged High Demand. We are already 22&ndash;33% below what PriceLabs wants and still not converting, 13 days out.</td></tr>
+          <tr><td>Inventory</td><td><span class="st st-pass">Pass</span></td><td>31 booked, 59 open, 0 blocked over the next 90 nights.</td></tr>
+          <tr><td>Playbook</td><td><span class="st st-pass">Pass</span></td><td>Notes current as of 8/15 (Neil's September midweek overrides). 39 active overrides, holiday structure intact.</td></tr>
+        </tbody>
+      </table>
+      <div class="callout urgent"><div class="c-title">Dated trigger</div>R6 fires on <b>Aug 29</b> &mdash; six days out. If Sept 5&ndash;6 are still open then, the standing plan is a &minus;15% DSO (roughly $663 and $553) plus loosening Sept 8&ndash;10 min-stay to 1 night. Nothing happens automatically; it comes back to you that morning.</div>
+    </div>
+
+    <div class="section">
+      <div class="sec-head pass">
+        <div class="sec-mark">C</div>
+        <div class="sec-title"><h2>Rustic Ridge Lodge</h2><span class="pill pill-pass">Pass</span></div>
+      </div>
+      <table>
+        <thead><tr><th style="width:26%">Check</th><th style="width:13%">Status</th><th>Detail</th></tr></thead>
+        <tbody>
+          <tr><td>Revenue</td><td><span class="st st-pass">Pass</span></td><td>YTD $69,017 vs $43,437 last year &mdash; <b>up 59%</b>. Next 30 days $12,415 vs $8,596 (+44%). RevPAR next 30 $443 vs $287 (<b>+54%</b>). Best year in the portfolio.</td></tr>
+          <tr><td>Occupancy</td><td><span class="st st-pass">Pass</span></td><td>Next 7 days 100% vs market 51%. September 63% vs 28%. MPI 2.2 over 60 days, the highest of any WEKYN home.</td></tr>
+          <tr><td>Booking stall</td><td><span class="st st-pass">Pass</span></td><td><b>Broken.</b> The 22-day drought ended Aug 21 with a 3-night Sept 16&ndash;18 stay at $401 ADR &mdash; and it came through the new WEKYN website, not a channel.</td></tr>
+          <tr><td>Blocked inventory</td><td><span class="st st-flag">Flag</span></td><td><b>13 nights held</b>: Sept 9, Sept 21&ndash;24, Oct 1&ndash;3 and Oct 14&ndash;18. PriceLabs is flagging them. Oct 14&ndash;18 is peak fall colors priced $335&ndash;$535 a night, worth roughly $2,265.</td></tr>
+          <tr><td>September midweek pricing</td><td><span class="st st-watch">Watch</span></td><td>Discounts are stacking. The &minus;8% Mon&ndash;Wed day-of-week rule Neil re-enabled 8/18 is landing on top of the &minus;10% and &minus;5% date overrides from 8/11. Sept 8 prices at $256 against an algorithm figure of $369 (&minus;31%); Sept 14&ndash;15 at $271 and $272 against $404 and $408 (&minus;33%). Those nights are still open.</td></tr>
+          <tr><td>Days 61&ndash;90</td><td><span class="st st-watch">Watch</span></td><td>Forward revenue at 60 days and 90 days are the same $13,671, so nothing is booked between Oct 23 and Nov 21.</td></tr>
+        </tbody>
+      </table>
+      <div class="callout note"><div class="c-title">Credit where it is due</div>The September premiums are working &mdash; the undocumented +45% on Sept 1&ndash;2 and +20% on Sept 3 and Sept 10&ndash;12 all booked. Worth writing into the notes before someone assumes they were a mistake.</div>
+    </div>
+
+    <div class="section">
+      <div class="sec-head pass">
+        <div class="sec-mark">D</div>
+        <div class="sec-title"><h2>Golden Wings</h2><span class="pill pill-pass">Pass</span></div>
+      </div>
+      <table>
+        <thead><tr><th style="width:26%">Check</th><th style="width:13%">Status</th><th>Detail</th></tr></thead>
+        <tbody>
+          <tr><td>Booking velocity</td><td><span class="st st-pass">Pass</span></td><td><b>16 nights picked up in the last 7 days</b>, 34 in the last 30. Last booked Aug 18. Next 7 days 100% occupied vs market 49%. Memphis books 0&ndash;3 days out, so this is a listing working exactly as its market does.</td></tr>
+          <tr><td>Revenue</td><td><span class="st st-pass">Pass</span></td><td>YTD $43,433 vs $36,481 last year (<b>+19%</b>). Forward 45-day ADR $234 vs $185 (+26%).</td></tr>
+          <tr><td>Forward book</td><td><span class="st st-watch">Watch</span></td><td>Next 90 days $9,484 vs $14,686 last year, <b>down 35%</b>. The near window is full; the far window is thin.</td></tr>
+          <tr><td>Pricing vs algorithm</td><td><span class="st st-flag">Flag</span></td><td>Open nights run <b>20&ndash;39% below</b> PriceLabs' own recommendation. Sept 2 prices $142 against $234. Oct 12 $169 against $231. Aug 31 has fallen to $127 against $199, near the $120 floor. PriceLabs is explicitly telling us to raise prices on a listing at 43% September occupancy vs 36% market.</td></tr>
+          <tr><td>Cancellations</td><td><span class="st st-flag">Flag</span></td><td><b>4 of the portfolio's 5 cancellations in the last 30 days were Golden Wings</b> &mdash; three Airbnb, one direct. Against 19 bookings that is well above the 5% benchmark.</td></tr>
+          <tr><td>Min-stay</td><td><span class="st st-watch">Watch</span></td><td>3-night minimums run across nearly all of October and November in a market that books 0&ndash;16 days out.</td></tr>
+          <tr><td>Configuration</td><td><span class="st st-pass">Pass</span></td><td>Zero date overrides. Base $245 matches the recommendation exactly. Cleanest listing we have.</td></tr>
+        </tbody>
+      </table>
+    </div>
+
+    <div class="section">
+      <div class="sec-head flag">
+        <div class="sec-mark">E</div>
+        <div class="sec-title"><h2>Butterfield Retreat</h2><span class="pill pill-flag">Flag</span></div>
+      </div>
+      <table>
+        <thead><tr><th style="width:26%">Check</th><th style="width:13%">Status</th><th>Detail</th></tr></thead>
+        <tbody>
+          <tr><td>Forward book</td><td><span class="st st-flag">Flag</span></td><td><b>$1,712 at 30 days, 60 days and 90 days &mdash; the same number three times.</b> Only 3 of the next 90 nights are booked. 84 are open. MPI 0.3.</td></tr>
+          <tr><td>Occupancy</td><td><span class="st st-flag">Flag</span></td><td>September 10% vs market 31%. October <b>0%</b> vs 15%. Next 60 days 10% vs 30%. This is the only home in the portfolio pacing below its market on every forward window.</td></tr>
+          <tr><td>Pricing vs algorithm</td><td><span class="st st-flag">Flag</span></td><td><b>Priced 22&ndash;51% above PriceLabs' own recommendation on the open nights.</b> Aug 31 $417 vs $276. Sept 1 $482 vs $340. Sept 3 $505 vs $371. Oct 15 $510 vs $363. Oct 18 $401 vs $284. Those figures are already <i>after</i> the &minus;15% and &minus;10% date overrides.</td></tr>
+          <tr><td>Likely cause</td><td><span class="st st-flag">Flag</span></td><td>The 8/8 note records demand factor sensitivity set to <b>moderately conservative</b>. On a low-demand property that suppresses exactly the discounting the algorithm would otherwise apply, which is what the gap above looks like. The discount overrides are trimming an already-inflated number rather than fixing the setting underneath.</td></tr>
+          <tr><td>Versus the comp set</td><td><span class="st st-flag">Flag</span></td><td>RankBreeze first-page competitor median is $452. Sept 1&ndash;3 sit at $476&ndash;$505, <b>above</b> the median, on a month at 10% occupancy.</td></tr>
+          <tr><td>Airbnb funnel</td><td><span class="st st-watch">Watch</span></td><td>Rank #7 of 320 and click-through 32.2% vs 12.4% for similar listings &mdash; the listing itself is compelling. But impressions are 1,840 vs 2,763 for peers, September views were 106 for the whole month, wishlists 0, and booking rate 2.04% vs 6.45%.</td></tr>
+          <tr><td>Labor Day</td><td><span class="st st-flag">Flag</span></td><td>Sept 4&ndash;6 are <b>blocked</b>. At algorithm pricing those three nights are worth about $1,622 on the best remaining shoulder weekend of the year.</td></tr>
+          <tr><td>New booking</td><td><span class="st st-pass">Pass</span></td><td>One reservation worth $2,616 landed Aug 24, for dates beyond this 90-day window. Real, but it does not touch the hole.</td></tr>
+        </tbody>
+      </table>
+      <div class="callout urgent"><div class="c-title">Changed diagnosis</div>Last week's read was that Butterfield was a visibility problem, not a price problem. That was half right. Impressions really are behind peers &mdash; but the pricing has since drifted 22&ndash;51% above the algorithm, and the forward book has fallen from $5,453 to $1,712 in five days. Fix the demand-sensitivity setting first, then judge the funnel.</div>
+    </div>
+
+    <div class="section">
+      <div class="sec-head flag">
+        <div class="sec-mark">F</div>
+        <div class="sec-title"><h2>Loon Cabin</h2><span class="pill pill-flag">Flag</span></div>
+      </div>
+      <table>
+        <thead><tr><th style="width:26%">Check</th><th style="width:13%">Status</th><th>Detail</th></tr></thead>
+        <tbody>
+          <tr><td>Near-term recovery</td><td><span class="st st-pass">Pass</span></td><td><b>Next 7 days 86% occupied vs market 62%</b>, up from 0% five days ago. Booked Aug 24&ndash;25 yesterday. 4 nights picked up in 7 days, 16 in 30. MPI next 7 back to 1.4.</td></tr>
+          <tr><td>September</td><td><span class="st st-flag">Flag</span></td><td><b>0% booked against a 31% market.</b> Not one night in September has sold. Next-60 occupancy 13% vs 29%.</td></tr>
+          <tr><td>Forward book</td><td><span class="st st-flag">Flag</span></td><td>$2,066 at 30 days, $4,049 at 90. RevPAR next 30 $69. 14 of 90 nights booked.</td></tr>
+          <tr><td>Pricing vs comp set</td><td><span class="st st-pass">Pass</span></td><td>RankBreeze first-page competitor median is $419. Loon's open September nights mostly run $230&ndash;$320. <b>We are not expensive</b> &mdash; a price cut is not the lever here.</td></tr>
+          <tr><td>Airbnb funnel</td><td><span class="st st-flag">Flag</span></td><td>Rank #6 of 320. Impressions 5,305 vs 3,832 for peers (38% ahead). Click-through 23.7% vs 8.8% &mdash; nearly three times the peer rate. But booking rate is <b>4.99% vs 11.32%</b>. Guests find it, click it, and leave. PriceLabs confirms those dates are genuinely open, not filled on another channel.</td></tr>
+          <tr><td>Labor Day</td><td><span class="st st-watch">Watch</span></td><td>Sept 4&ndash;6 are open at $445, $466 and $419, all flagged High Demand and all sitting at roughly the algorithm figure. A 5-bedroom on Ripple Lake with Labor Day weekend unsold is the clearest single opportunity on this listing.</td></tr>
+          <tr><td>Playbook</td><td><span class="st st-flag">Flag</span></td><td><b>38 active date overrides; the notes field documents only the July 2027 set.</b> Undocumented entries include Dec 17 at +75%, Dec 18&ndash;19 at +45%, Dec 20 at +60%, the June 2027 premiums and the October min-stay bumps.</td></tr>
+        </tbody>
+      </table>
+      <div class="callout note"><div class="c-title">Consistent finding</div>This diagnosis has now held for two weeks running: elite visibility, weak conversion, priced under the comp median. Whatever is losing the guest happens <i>after</i> the click &mdash; photo order past the hero shot, review count and recency, house rules, or how the accessibility framing reads to a family group.</div>
+    </div>
+
+    <div class="section">
+      <div class="sec-head watch">
+        <div class="sec-mark">G</div>
+        <div class="sec-title"><h2>Channel Mix &amp; Cancellations</h2><span class="pill pill-watch">Watch</span></div>
+      </div>
+      <table>
+        <thead><tr><th style="width:26%">Check</th><th style="width:13%">Status</th><th>Detail</th></tr></thead>
+        <tbody>
+          <tr><td>Airbnb</td><td><span class="st st-pass">Pass</span></td><td>13 bookings, $23,272 &mdash; 59% of the last 30 days' booked revenue.</td></tr>
+          <tr><td>VRBO</td><td><span class="st st-pass">Pass</span></td><td>5 bookings, $9,687 &mdash; 24%.</td></tr>
+          <tr><td>Direct</td><td><span class="st st-pass">Pass</span></td><td>1 booking, $5,072 &mdash; 13%.</td></tr>
+          <tr><td>WEKYN website</td><td><span class="st st-pass">Pass</span></td><td><b>1 booking, $1,684 &mdash; the new site's first reservation</b>, and it is the one that broke Rustic Ridge's 22-day stall. Direct plus website is 17% of booked revenue.</td></tr>
+          <tr><td>Cancellations</td><td><span class="st st-flag">Flag</span></td><td>5 in 30 days across the portfolio. <b>4 of them Golden Wings</b> (3 Airbnb, 1 direct), 1 Rustic Ridge Airbnb.</td></tr>
+        </tbody>
+      </table>
+    </div>
+
+    <div class="section">
+      <div class="sec-head flag">
+        <div class="sec-mark">→</div>
+        <div class="sec-title"><h2>Recommended Actions</h2><span class="pill pill-flag">13</span></div>
+      </div>
+            <div class="action urgent">
+        <div class="a-id">R7</div>
+        <div class="a-body">
+          <div class="a-title">Butterfield &mdash; reset demand factor sensitivity</div>
+          <div class="a-detail">Open nights price 22&ndash;51% above PriceLabs' recommendation while the home paces at one-third of market (MPI 0.3, 84 of 90 nights open). The 8/8 &ldquo;moderately conservative&rdquo; setting is the most likely cause. Move it back toward moderate/aggressive and let the algorithm discount the dead dates. Worth roughly $5,000 over 90 days &mdash; the largest single item in this report.</div>
+          <div class="a-tags"><span class="tag tag-impact-high">High Impact</span><span class="tag tag-ui">UI &mdash; Evan clicks</span><span class="tag tag-when">Act today</span></div>
+        </div>
+      </div>
+      <div class="action hot">
+        <div class="a-id">R6</div>
+        <div class="a-body">
+          <div class="a-title">Border Point &mdash; Labor Day rescue (trigger Aug 29)</div>
+          <div class="a-detail">Sept 5&ndash;6 remain open at $780 and $650 against algorithm figures of $995 and $963, both High Demand, 13 days out. Standing plan: if still open on Aug 29, apply a &minus;15% DSO (about $663 and $553) and loosen Sept 8&ndash;10 min-stay to 1 night. Roughly $1,430 of inventory.</div>
+          <div class="a-tags"><span class="tag tag-impact-high">High Impact</span><span class="tag tag-api">API &mdash; say &ldquo;apply R6&rdquo;</span><span class="tag tag-when">Fires Aug 29 &mdash; 6 days</span></div>
+        </div>
+      </div>
+      <div class="action hot">
+        <div class="a-id">R8</div>
+        <div class="a-body">
+          <div class="a-title">Butterfield &mdash; confirm the Sept 4&ndash;6 Labor Day block</div>
+          <div class="a-detail">Three nights held on the best remaining shoulder weekend, worth about $1,622 at algorithm pricing. If it is a real owner stay, leave it. If it is a leftover hold, unblock today.</div>
+          <div class="a-tags"><span class="tag tag-impact-high">High Impact</span><span class="tag tag-ui">UI &mdash; Evan clicks</span><span class="tag tag-when">This week</span></div>
+        </div>
+      </div>
+      <div class="action hot">
+        <div class="a-id">R9</div>
+        <div class="a-body">
+          <div class="a-title">All five &mdash; enable last-minute discounting</div>
+          <div class="a-detail">Every property sits at 0%. PriceLabs recommends 27% (Crosslake), 29% (Aitkin), 31% (Emily), 37% (Memphis). September books 1&ndash;7 days out in Crosslake and 0&ndash;3 in Memphis. Minimum prices ($120&ndash;$249) protect the floor. This is the single biggest structural gap in the portfolio.</div>
+          <div class="a-tags"><span class="tag tag-impact-high">High Impact</span><span class="tag tag-ui">UI &mdash; Evan clicks</span><span class="tag tag-when">This week</span></div>
+        </div>
+      </div>
+      <div class="action hot">
+        <div class="a-id">R10</div>
+        <div class="a-body">
+          <div class="a-title">Rustic Ridge &mdash; confirm 13 blocked nights</div>
+          <div class="a-detail">Sept 9, Sept 21&ndash;24, Oct 1&ndash;3, Oct 14&ndash;18. The October block covers peak fall colors at $335&ndash;$535 a night, roughly $2,265. Check each against what the owner actually asked for.</div>
+          <div class="a-tags"><span class="tag tag-impact-med">Med Impact</span><span class="tag tag-ui">UI &mdash; Evan clicks</span><span class="tag tag-when">This week</span></div>
+        </div>
+      </div>
+      <div class="action hot">
+        <div class="a-id">R11</div>
+        <div class="a-body">
+          <div class="a-title">Rustic Ridge &mdash; stop the September midweek double-discount</div>
+          <div class="a-detail">The &minus;8% Mon&ndash;Wed day-of-week rule is stacking on the &minus;10% and &minus;5% date overrides. Sept 8 lands at $256 against $369; Sept 14&ndash;15 at $271&ndash;$272 against $404&ndash;$408. Those nights are still open, so the extra discount is buying nothing. Drop the overlapping DSOs and keep the DOW rule.</div>
+          <div class="a-tags"><span class="tag tag-impact-med">Med Impact</span><span class="tag tag-api">API &mdash; say &ldquo;apply R11&rdquo;</span><span class="tag tag-when">This week</span></div>
+        </div>
+      </div>
+      <div class="action">
+        <div class="a-id">R1</div>
+        <div class="a-body">
+          <div class="a-title">Border Point &mdash; September DSO, carried forward</div>
+          <div class="a-detail">Sept 20&ndash;24 and Sept 27&ndash;30 at &minus;10% of recommended. Raised 2026-08-22 and still awaiting your call. Those eight nights are all open.</div>
+          <div class="a-tags"><span class="tag tag-impact-med">Med Impact</span><span class="tag tag-api">API &mdash; say &ldquo;apply R1&rdquo;</span><span class="tag tag-when">Carried &mdash; awaiting approval</span></div>
+        </div>
+      </div>
+      <div class="action">
+        <div class="a-id">R12</div>
+        <div class="a-body">
+          <div class="a-title">Golden Wings &mdash; find the setting pricing below algorithm</div>
+          <div class="a-detail">Open nights run 20&ndash;39% under PriceLabs' recommendation on a listing at 43% September occupancy vs 36% market, and PriceLabs is telling us to raise. Aug 31 has fallen to $127 against $199. Separately, 4 of the portfolio's 5 cancellations in 30 days were this property &mdash; worth a policy look.</div>
+          <div class="a-tags"><span class="tag tag-impact-med">Med Impact</span><span class="tag tag-ui">UI &mdash; Evan clicks</span><span class="tag tag-when">By Aug 30</span></div>
+        </div>
+      </div>
+      <div class="action">
+        <div class="a-id">R13</div>
+        <div class="a-body">
+          <div class="a-title">Loon Cabin &mdash; listing content audit, not a price cut</div>
+          <div class="a-detail">Rank #6 of 320, click-through 23.7% vs 8.8% for peers, priced under the $419 comp median, and booking rate 4.99% vs 11.32%. The leak is after the click. Audit photo order past the hero image, review count and recency, house rules, and how the accessibility framing reads to a family group. September is 0% booked.</div>
+          <div class="a-tags"><span class="tag tag-impact-high">High Impact</span><span class="tag tag-ui">UI &mdash; Evan clicks</span><span class="tag tag-when">This week</span></div>
+        </div>
+      </div>
+      <div class="action">
+        <div class="a-id">R2</div>
+        <div class="a-body">
+          <div class="a-title">Border Point &mdash; intake still open</div>
+          <div class="a-detail">Annual revenue goal, channel fee markups and any active platform discounts. Without these the effective-rate math and the goal tracker (R4) stay blocked. Ten minutes of your time.</div>
+          <div class="a-tags"><span class="tag tag-impact-med">Med Impact</span><span class="tag tag-ui">UI &mdash; Evan clicks</span><span class="tag tag-when">Carried from Aug 22</span></div>
+        </div>
+      </div>
+      <div class="action">
+        <div class="a-id">R14</div>
+        <div class="a-body">
+          <div class="a-title">Loon Cabin &amp; Rustic Ridge &mdash; write the undocumented overrides into the notes</div>
+          <div class="a-detail">Loon has 38 active overrides with only the July 2027 set logged, including December premiums of +45% to +75%. Rustic Ridge's September +45% and +20% premiums are also unlogged &mdash; and they worked. Paste-ready notes are in the session output.</div>
+          <div class="a-tags"><span class="tag tag-impact-low">Low Impact</span><span class="tag tag-ui">UI &mdash; Evan clicks</span><span class="tag tag-when">By Aug 30</span></div>
+        </div>
+      </div>
+      <div class="action">
+        <div class="a-id">R5</div>
+        <div class="a-body">
+          <div class="a-title">Border Point &mdash; verify the 3BR-filtered comp set</div>
+          <div class="a-detail">Confirm the 3-bedroom-filtered comp set is applied as the Neighborhood Data source. Carried from Aug 22.</div>
+          <div class="a-tags"><span class="tag tag-impact-low">Low Impact</span><span class="tag tag-ui">UI &mdash; Evan clicks</span><span class="tag tag-when">Carried</span></div>
+        </div>
+      </div>
+      <div class="action">
+        <div class="a-id">R4</div>
+        <div class="a-body">
+          <div class="a-title">Border Point &mdash; Report Builder goal tracker</div>
+          <div class="a-detail">Blocked until R2 intake lands. Carried from Aug 22.</div>
+          <div class="a-tags"><span class="tag tag-impact-low">Low Impact</span><span class="tag tag-ui">UI &mdash; Evan clicks</span><span class="tag tag-when">Blocked on R2</span></div>
+        </div>
+      </div>
+      <div class="callout gold">
+        <div class="c-title">One-word approvals</div>
+        <b>apply R1</b> (or "apply all"): Claude executes it, logs it, and hands you the paste-ready PriceLabs note · <b>skip R2</b>: drop it this cycle · <b>hold R3 until [date]</b>: it comes back on that date.
+      </div>
+    </div>
+
+    <div class="section">
+      <div class="sec-head pass">
+        <div class="sec-mark">✓</div>
+        <div class="sec-title"><h2>What's Working</h2><span class="pill pill-pass">Wins</span></div>
+      </div>
+      <ul class="wins">
+                <li>Rustic Ridge is up <b>59% year to date</b> &mdash; $69,017 against $43,437 &mdash; with RevPAR over the next 30 days up 54%.</li>
+        <li>The new WEKYN website produced <b>its first booking</b> ($1,684) and it is the one that ended Rustic Ridge's 22-day stall.</li>
+        <li>Loon Cabin's near window went from <b>0% to 86% occupied</b> in five days, against a 62% market.</li>
+        <li>Golden Wings picked up <b>16 nights in 7 days</b> and is 100% occupied for the next week against a 49% market.</li>
+        <li>Border Point forward ADR is <b>$690 vs $589</b> last year, up 17%, with YTD revenue up 9.4%.</li>
+        <li>Direct and website bookings are <b>17% of the last 30 days' booked revenue</b> &mdash; $6,756 of $39,716.</li>
+        <li>Neil's undocumented September premiums on Rustic Ridge (+45% Sept 1&ndash;2, +20% Sept 3 and 10&ndash;12) <b>all booked</b>.</li>
+        <li>Border Point drift check came back <b>completely clean</b> &mdash; ladder and all 39 overrides unchanged since Aug 22.</li>
+      </ul>
+    </div>
+
+  </div>
+
+  <div class="foot">
+    <span class="fm">WEKYN Stays Revenue Desk</span>
+    <span>WEKYN Portfolio · August 23, 2026 · PriceLabs · OwnerRez · RankBreeze</span>
+  </div>
+
+</div>
+</body>
+</html>
